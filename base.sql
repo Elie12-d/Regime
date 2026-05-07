@@ -20,23 +20,23 @@ CREATE TABLE regimes (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nom VARCHAR(255) NOT NULL,
     description TEXT NOT NULL,
-    objectif_id INT,
+    categorieObjectif_id INT,
     pourcentageViande FLOAT NOT NULL,
     pourcentageVolaille FLOAT NOT NULL,
     pourcentagePoisson FLOAT NOT NULL,
     prixParJour FLOAT NOT NULL,
     variationPoids FLOAT NOT NULL,
-    FOREIGN KEY (objectif_id) REFERENCES categorieObjectif(id)
+    FOREIGN KEY (categorieObjectif_id) REFERENCES categorieObjectif(id)
 );
 
 CREATE TABLE activitePhisique (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nom VARCHAR(255) NOT NULL,
     description TEXT NOT NULL,
-    idObjectif INT,
+    categorieObjectif_id INT,
     durationMinutes INT NOT NULL,
     caloriesBrulees FLOAT NOT NULL,
-    FOREIGN KEY (idObjectif) REFERENCES categorieObjectif(id)
+    FOREIGN KEY (categorieObjectif_id) REFERENCES categorieObjectif(id)
 );
 
 CREATE TABLE infoSante (
@@ -44,10 +44,10 @@ CREATE TABLE infoSante (
     user_id INT,
     poids FLOAT NOT NULL,
     taille FLOAT NOT NULL,
-    idObjectif INT,
+    categorieObjectif_id INT,
     dateEnregistrement DATE NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(id),
-    FOREIGN KEY (idObjectif) REFERENCES categorieObjectif(id)
+    FOREIGN KEY (categorieObjectif_id) REFERENCES categorieObjectif(id)
 );
 
 CREATE TABLE porteMonnaie (
@@ -83,3 +83,10 @@ CREATE TABLE achatRegime (
     FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY (regime_id) REFERENCES regimes(id)
 );
+
+INSERT INTO users (pseudo, genre, email, password, isGold) VALUES
+('elie01', 'Homme', 'elie01@gmail.com', 'pass123', TRUE),
+('sarah_dev', 'Femme', 'sarah.dev@gmail.com', 'azerty456', FALSE),
+('mickael', 'Homme', 'mickael@yahoo.com', 'mick789', FALSE),
+('rina22', 'Femme', 'rina22@hotmail.com', 'rina2026', TRUE),
+('joel_pro', 'Homme', 'joelpro@gmail.com', 'joelpass', FALSE);
