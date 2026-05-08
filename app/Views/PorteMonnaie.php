@@ -10,7 +10,7 @@
     <?php if (isset($porteMonnaie['solde'])): ?>
         <p>Solde actuel : <?= esc($porteMonnaie['solde']) ?> Ar</p>
     <?php else: ?>
-        <p>Vous n'avez pas encore de porte-monnaie. Veuillez contacter l'administrateur.</p>
+        <p>Porte Monnaie non trouvé</p>
     <?php endif; ?>
 </body>
 </html>
