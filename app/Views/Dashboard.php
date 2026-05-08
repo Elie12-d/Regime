@@ -6,18 +6,14 @@
     <title>Suivi de votre sante</title>
 </head>
 <body>
-<<<<<<< HEAD
     <head>
-        <a href="/porte-monnaie">Mon porte-monnaie</a>
+        <div class="nav">
+            <button><a href="<?= site_url('porte-monnaie') ?>">Mon porte-monnaie</a></button>
+            <button><a href="<?= site_url('dashboard') ?>">Dashboard</a></button>
+            <button><a href="<?= site_url('statistiques') ?>">Statistiques</a></button>
+            <button><a href="<?= site_url('logout') ?>">Déconnexion</a></button>
+        </div>
     </head>
-=======
-    <div class="nav">
-        <button><a href="<?= site_url('dashboard') ?>">Dashboard</a></button>
-        <button><a href="<?= site_url('porte-monnaie') ?>">Porte-monnaie</a></button>
-        <button><a href="<?= site_url('statistiques') ?>">Statistiques</a></button>
-        <button><a href="<?= site_url('logout') ?>">Déconnexion</a></button>
-    </div>
->>>>>>> Elie
     <fieldset>
         <legend>Votre Indice de Masse Corporelle (IMC)</legend>
         <h1><?= esc($imc) ?></h1>
