@@ -1242,6 +1242,31 @@ in APPPATH/Controllers/Home.php on line 34.
  6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
  7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
  8 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 18:25:14 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\PorteMonnaieModel::getPorteMonnaieByUserId
+[Method: GET, Route: porte-monnaie]
+in SYSTEMPATH/Model.php on line 761.
+ 1 APPPATH/Controllers/PorteMonnaie.php(12): CodeIgniter\Model->__call()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\PorteMonnaie->index()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 18:25:20 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "AchatRegime.php"
+[Method: GET, Route: traitements]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/AchatRegime.php(14): view()
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\AchatRegime->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 18:25:22 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Statistiques.php"
  8 SYSTEMPATH/rewrite.php(44): require_once('/home/elie/S4/Mr Rojo/Regime/public/index.php')
 CRITICAL - 2026-05-08 17:57:44 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Statistiques.php"
 [Method: GET, Route: statistiques]
@@ -1255,6 +1280,29 @@ in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
  7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
  9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 18:31:41 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\PorteMonnaieModel::getPorteMonnaieByUserId
+[Method: GET, Route: porte-monnaie]
+in SYSTEMPATH/Model.php on line 761.
+ 1 APPPATH/Controllers/PorteMonnaie.php(12): CodeIgniter\Model->__call()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\PorteMonnaie->index()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 18:33:05 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\PorteMonnaieModel::getPorteMonnaieByUserId
+[Method: GET, Route: porte-monnaie]
+in SYSTEMPATH/Model.php on line 761.
+ 1 APPPATH/Controllers/PorteMonnaie.php(12): CodeIgniter\Model->__call()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\PorteMonnaie->index()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
 10 SYSTEMPATH/rewrite.php(44): require_once('/home/elie/S4/Mr Rojo/Regime/public/index.php')
 CRITICAL - 2026-05-08 17:57:46 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "AchatRegime.php"
 [Method: GET, Route: traitements]
@@ -1269,6 +1317,82 @@ in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
  8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
  9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
 10 SYSTEMPATH/rewrite.php(44): require_once('/home/elie/S4/Mr Rojo/Regime/public/index.php')
+CRITICAL - 2026-05-08 20:35:55 --> ErrorException: Cannot use App\Models\InfoSanteModel as InfoSanteModel because the name is already in use
+[Method: GET, Route: liste-regimes]
+in APPPATH/Controllers/RegimeController.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-05-08 20:35:59 --> ErrorException: Cannot use App\Models\InfoSanteModel as InfoSanteModel because the name is already in use
+[Method: GET, Route: liste-regimes]
+in APPPATH/Controllers/RegimeController.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-05-08 20:36:06 --> ErrorException: Cannot use App\Models\InfoSanteModel as InfoSanteModel because the name is already in use
+[Method: GET, Route: liste-regimes]
+in APPPATH/Controllers/RegimeController.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-05-08 20:36:12 --> ErrorException: Cannot use App\Models\InfoSanteModel as InfoSanteModel because the name is already in use
+[Method: GET, Route: liste-regimes]
+in APPPATH/Controllers/RegimeController.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-05-08 20:36:28 --> ErrorException: Cannot use App\Models\InfoSanteModel as InfoSanteModel because the name is already in use
+[Method: GET, Route: liste-regimes]
+in APPPATH/Controllers/RegimeController.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-05-08 20:36:41 --> ErrorException: Cannot use App\Models\InfoSanteModel as InfoSanteModel because the name is already in use
+[Method: GET, Route: liste-regimes]
+in APPPATH/Controllers/RegimeController.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-05-08 20:56:11 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Statistiques.php"
+[Method: GET, Route: statistiques]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/StatistiquesController.php(9): view()
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\StatistiquesController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 20:56:31 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Statistiques.php"
+[Method: GET, Route: statistiques]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/StatistiquesController.php(9): view()
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\StatistiquesController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 20:56:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "AchatRegime.php"
+[Method: GET, Route: traitements]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/AchatRegime.php(14): view()
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\AchatRegime->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 21:28:42 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Statistiques.php"
+[Method: GET, Route: statistiques]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/StatistiquesController.php(9): view()
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\StatistiquesController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
 CRITICAL - 2026-05-08 18:31:06 --> ErrorException: Trying to access array offset on null
 [Method: GET, Route: liste-regimes]
 in APPPATH/Controllers/RegimeController.php on line 23.
