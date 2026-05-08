@@ -8,7 +8,7 @@
 <body>
     <fieldset>
         <legend>Login</legend>
-        <form action="<?= site_url() ?>dashboard" method="get">
+        <form action="<?= site_url('dashboard') ?>" method="post">
             <button type="submit">Se connecter</button>
         </form>
     </fieldset>
