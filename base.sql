@@ -119,3 +119,15 @@ INSERT INTO infoSante (user_id, poids, taille, categorieObjectif_id, dateEnregis
 (3, 78.0, 1.68, 3, '2024-02-01'),  -- IMC ≈ 27.7 → Surpoids
 (4, 95.0, 1.70, 2, '2024-02-10'),  -- IMC ≈ 32.9 → Gros
 (5, 120.0, 1.65, 1, '2024-02-15'); -- IMC ≈ 44.1 → Très gros
+
+INSERT INTO regimes (nom, description, categorieObjectif_id, pourcentageViande, pourcentageVolaille, pourcentagePoisson, prixParJour, variationPoids) VALUES
+('Méditerranéen léger', 'Riche en légumes, poissons maigres et huile d''olive. Idéal pour une perte de poids progressive.', 1, 15.0, 10.0, 25.0, 42500, -0.30),
+('Protéiné minceur', 'Apport élevé en protéines pour préserver la masse musculaire pendant la perte de poids.', 1, 30.0, 20.0, 25.0, 60000, -0.50),
+('Détox express', 'Repas légers et hypocaloriques avec beaucoup de légumes verts et poissons blancs.', 1, 10.0, 10.0, 20.0, 47500, -0.40),
+('Équilibré stable', 'Repas variés et équilibrés pour maintenir son poids de forme sans frustration.', 2, 20.0, 20.0, 20.0, 50000, 0.00),
+('Pescatarien doux', 'Sans viande rouge, riche en poissons et œufs. Maintien du poids et bien-être.', 2, 0.0, 15.0, 35.0, 57500, 0.00),
+('Omnivore modéré', 'Toutes les protéines en quantités mesurées pour rester stable.', 2, 25.0, 15.0, 20.0, 45000, 0.05),
+('Prise de masse', 'Riche en viandes et volailles, pour un gain musculaire et pondéral contrôlé.', 3, 35.0, 30.0, 15.0, 70000, 0.60),
+('Hyperprotéiné sec', 'Très riche en protéines maigres pour prendre du muscle sec sans trop de gras.', 3, 25.0, 35.0, 25.0, 77500, 0.50),
+('Gainer clean', 'Apport calorique élevé mais propre, avec glucides complexes et bonnes protéines.', 3, 30.0, 25.0, 20.0, 65000, 0.70),
+('Omnivore renforcé', 'Mix complet pour prendre du poids de façon équilibrée et durable.', 3, 28.0, 28.0, 18.0, 62500, 0.55);
