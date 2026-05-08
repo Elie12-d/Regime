@@ -606,3 +606,478 @@ in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
 13 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
 14 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
 15 SYSTEMPATH/rewrite.php(44): require_once('/home/elie/S4/Mr Rojo/Regime/public/index.php')
+CRITICAL - 2026-05-08 16:21:57 --> ErrorException: Trying to access array offset on null
+[Method: GET, Route: dashboard]
+in APPPATH/Controllers/Home.php on line 34.
+ 1 APPPATH/Controllers/Home.php(34): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 16:22:01 --> ErrorException: Trying to access array offset on null
+[Method: GET, Route: dashboard]
+in APPPATH/Controllers/Home.php on line 34.
+ 1 APPPATH/Controllers/Home.php(34): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 16:22:02 --> ErrorException: Trying to access array offset on null
+[Method: GET, Route: dashboard]
+in APPPATH/Controllers/Home.php on line 34.
+ 1 APPPATH/Controllers/Home.php(34): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 16:31:26 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\PorteMonnaieModel::getPorteMonnaieByUserId
+[Method: GET, Route: porte-monnaie]
+in SYSTEMPATH/Model.php on line 761.
+ 1 APPPATH/Controllers/PorteMonnaie.php(12): CodeIgniter\Model->__call()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\PorteMonnaie->index()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 16:31:35 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\PorteMonnaieModel::getPorteMonnaieByUserId
+[Method: GET, Route: porte-monnaie]
+in SYSTEMPATH/Model.php on line 761.
+ 1 APPPATH/Controllers/PorteMonnaie.php(12): CodeIgniter\Model->__call()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\PorteMonnaie->index()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 17:19:45 --> ErrorException: Undefined array key "min"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/Dashboard.php on line 193.
+ 1 APPPATH/Views/Dashboard.php(193): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/harena/Documents/ITU/S4/Système d’information/Regime/app/Views/Dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(60): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 17:19:47 --> ErrorException: Undefined array key "min"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/Dashboard.php on line 193.
+ 1 APPPATH/Views/Dashboard.php(193): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/harena/Documents/ITU/S4/Système d’information/Regime/app/Views/Dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(60): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 17:19:48 --> ErrorException: Undefined array key "min"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/Dashboard.php on line 193.
+ 1 APPPATH/Views/Dashboard.php(193): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/harena/Documents/ITU/S4/Système d’information/Regime/app/Views/Dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(60): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 17:26:51 --> ErrorException: Undefined array key "range"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/Dashboard.php on line 199.
+ 1 APPPATH/Views/Dashboard.php(199): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/harena/Documents/ITU/S4/Système d’information/Regime/app/Views/Dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(60): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 17:27:29 --> ErrorException: Undefined array key "range"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/Dashboard.php on line 191.
+ 1 APPPATH/Views/Dashboard.php(191): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/harena/Documents/ITU/S4/Système d’information/Regime/app/Views/Dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(60): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 17:27:29 --> ErrorException: Undefined array key "range"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/Dashboard.php on line 191.
+ 1 APPPATH/Views/Dashboard.php(191): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/harena/Documents/ITU/S4/Système d’information/Regime/app/Views/Dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(60): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 17:27:29 --> ErrorException: Undefined array key "range"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/Dashboard.php on line 191.
+ 1 APPPATH/Views/Dashboard.php(191): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/harena/Documents/ITU/S4/Système d’information/Regime/app/Views/Dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(60): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 17:27:30 --> ErrorException: Undefined array key "range"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/Dashboard.php on line 191.
+ 1 APPPATH/Views/Dashboard.php(191): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/harena/Documents/ITU/S4/Système d’information/Regime/app/Views/Dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(60): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 17:27:44 --> ErrorException: Undefined array key "range"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/Dashboard.php on line 191.
+ 1 APPPATH/Views/Dashboard.php(191): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/harena/Documents/ITU/S4/Système d’information/Regime/app/Views/Dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(60): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 17:27:45 --> ErrorException: Undefined array key "range"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/Dashboard.php on line 191.
+ 1 APPPATH/Views/Dashboard.php(191): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/harena/Documents/ITU/S4/Système d’information/Regime/app/Views/Dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(60): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 17:27:45 --> ErrorException: Undefined array key "range"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/Dashboard.php on line 191.
+ 1 APPPATH/Views/Dashboard.php(191): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/harena/Documents/ITU/S4/Système d’information/Regime/app/Views/Dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(60): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 17:27:45 --> ErrorException: Undefined array key "range"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/Dashboard.php on line 191.
+ 1 APPPATH/Views/Dashboard.php(191): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/harena/Documents/ITU/S4/Système d’information/Regime/app/Views/Dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(60): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 17:27:46 --> ErrorException: Undefined array key "range"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/Dashboard.php on line 191.
+ 1 APPPATH/Views/Dashboard.php(191): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/harena/Documents/ITU/S4/Système d’information/Regime/app/Views/Dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(60): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 17:27:46 --> ErrorException: Undefined array key "range"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/Dashboard.php on line 191.
+ 1 APPPATH/Views/Dashboard.php(191): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/harena/Documents/ITU/S4/Système d’information/Regime/app/Views/Dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(60): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 17:27:46 --> ErrorException: Undefined array key "range"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/Dashboard.php on line 191.
+ 1 APPPATH/Views/Dashboard.php(191): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/harena/Documents/ITU/S4/Système d’information/Regime/app/Views/Dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(60): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 17:27:46 --> ErrorException: Undefined array key "range"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/Dashboard.php on line 191.
+ 1 APPPATH/Views/Dashboard.php(191): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/harena/Documents/ITU/S4/Système d’information/Regime/app/Views/Dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(60): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 17:27:46 --> ErrorException: Undefined array key "range"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/Dashboard.php on line 191.
+ 1 APPPATH/Views/Dashboard.php(191): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/harena/Documents/ITU/S4/Système d’information/Regime/app/Views/Dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(60): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 17:27:46 --> ErrorException: Undefined array key "range"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/Dashboard.php on line 191.
+ 1 APPPATH/Views/Dashboard.php(191): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/harena/Documents/ITU/S4/Système d’information/Regime/app/Views/Dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(60): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 17:27:46 --> ErrorException: Undefined array key "range"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/Dashboard.php on line 191.
+ 1 APPPATH/Views/Dashboard.php(191): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/harena/Documents/ITU/S4/Système d’information/Regime/app/Views/Dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(60): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 17:27:46 --> ErrorException: Undefined array key "range"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/Dashboard.php on line 191.
+ 1 APPPATH/Views/Dashboard.php(191): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/harena/Documents/ITU/S4/Système d’information/Regime/app/Views/Dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(60): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 17:27:46 --> ErrorException: Undefined array key "range"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/Dashboard.php on line 191.
+ 1 APPPATH/Views/Dashboard.php(191): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/harena/Documents/ITU/S4/Système d’information/Regime/app/Views/Dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(60): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 17:27:46 --> ErrorException: Undefined array key "range"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/Dashboard.php on line 191.
+ 1 APPPATH/Views/Dashboard.php(191): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/harena/Documents/ITU/S4/Système d’information/Regime/app/Views/Dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(60): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 17:27:46 --> ErrorException: Undefined array key "range"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/Dashboard.php on line 191.
+ 1 APPPATH/Views/Dashboard.php(191): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/harena/Documents/ITU/S4/Système d’information/Regime/app/Views/Dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(60): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 17:27:46 --> ErrorException: Undefined array key "range"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/Dashboard.php on line 191.
+ 1 APPPATH/Views/Dashboard.php(191): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/harena/Documents/ITU/S4/Système d’information/Regime/app/Views/Dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(60): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 17:27:46 --> ErrorException: Undefined array key "range"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/Dashboard.php on line 191.
+ 1 APPPATH/Views/Dashboard.php(191): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/harena/Documents/ITU/S4/Système d’information/Regime/app/Views/Dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(60): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 17:27:46 --> ErrorException: Undefined array key "range"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/Dashboard.php on line 191.
+ 1 APPPATH/Views/Dashboard.php(191): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/harena/Documents/ITU/S4/Système d’information/Regime/app/Views/Dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(60): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 17:27:46 --> ErrorException: Undefined array key "range"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/Dashboard.php on line 191.
+ 1 APPPATH/Views/Dashboard.php(191): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/harena/Documents/ITU/S4/Système d’information/Regime/app/Views/Dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(60): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 17:27:46 --> ErrorException: Undefined array key "range"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/Dashboard.php on line 191.
+ 1 APPPATH/Views/Dashboard.php(191): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/harena/Documents/ITU/S4/Système d’information/Regime/app/Views/Dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(60): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
