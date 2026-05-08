@@ -123,7 +123,7 @@
                     <div class="stats">
                         <div class="stat">
                             <div class="label">Prix par jour</div>
-                            <div class="value"><?= $regime['prixParJour'] ?>€</div>
+                            <div class="value"><?= $regime['prixParJour'] ?> Ar</div>
                         </div>
                         <div class="stat">
                             <div class="label">Variation de poids</div>

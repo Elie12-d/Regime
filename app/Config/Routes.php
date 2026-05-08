@@ -14,3 +14,4 @@ $routes->get('/statistiques', 'StatistiquesController::index');
 $routes->get('/logout', 'AuthController::logout');
 $routes->get('/liste-regimes', 'RegimeController::afficherRegimesByIdCategorie');
 $routes->post('/porte-monnaie/recharger', 'PorteMonnaie::recharger');
+$routes->get('/commande/(:num)', 'RegimeController::commanderRegime/$1');
