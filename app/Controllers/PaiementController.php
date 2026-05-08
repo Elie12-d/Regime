@@ -50,7 +50,7 @@ class PaiementController extends BaseController
             $prixTotal = session()->get('prixTotal');
 
             $porteMonnaieModel = new PorteMonnaieModel();
-            $wallet = $porteMonnaieModel->getWalletByUserId(session()->get('id'));
+            $wallet = $porteMonnaieModel->getPorteMonnaieByUserId(session()->get('id'));
 
             $data = [
                 'listeRegimes' => $listeRegimes,
@@ -115,7 +115,7 @@ class PaiementController extends BaseController
         session()->set('prixTotal', $prixTotal);
 
         $porteMonnaieModel = new PorteMonnaieModel();
-        $wallet = $porteMonnaieModel->getWalletByUserId(session()->get('id'));
+        $wallet = $porteMonnaieModel->getPorteMonnaieByUserId(session()->get('id'));
 
         // envoi des data
         $data = [
