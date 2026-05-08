@@ -171,6 +171,7 @@
             <a class="nav-link" href="<?= site_url('porte-monnaie') ?>">Mon porte-monnaie</a>
             <a class="nav-link primary" href="<?= site_url('dashboard') ?>">Dashboard</a>
             <a class="nav-link" href="<?= site_url('statistiques') ?>">Statistiques</a>
+            <a class="nav-link" href="<?= site_url('traitements') ?>">Mes traitements</a>
             <a class="nav-link" href="<?= site_url('logout') ?>">Déconnexion</a>
         </nav>
     </header>
