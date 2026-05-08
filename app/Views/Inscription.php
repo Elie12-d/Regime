@@ -32,13 +32,20 @@
         label{font-weight:700;color:var(--text)}
         input[type="text"],
         input[type="email"],
-        input[type="password"]{padding:12px 14px;border-radius:12px;border:2px solid rgba(155, 160, 122, 0.35);font-size:1rem;outline:none}
+        input[type="password"],
+        input[type="number"]{padding:12px 14px;border-radius:12px;border:2px solid rgba(155, 160, 122, 0.35);font-size:1rem;outline:none}
         .password-field{position:relative;display:flex;align-items:center}
         .password-field input{width:100%;padding-right:72px}
         .toggle-password{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:transparent;border:none;color:var(--accent);font-weight:800;cursor:pointer}
         input[type="text"]:focus,
         input[type="email"]:focus,
-        input[type="password"]:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(108,53,104,0.15)}
+        input[type="password"]:focus,
+        input[type="number"]:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(108,53,104,0.15)}
+        .step{display:none}
+        .step.active{display:block}
+        .step-title{font-size:1.2rem;font-weight:900;color:var(--accent);margin:0 0 10px}
+        .step-title.personal{margin-bottom:14px}
+        .step-2 input[type="number"]{padding:16px 16px;font-size:1.05rem}
         .form-actions{display:flex;gap:12px}
         .form-actions button{flex:1}
         .btn-secondary{background:rgba(108,53,104,0.12);color:var(--accent);border:2px solid var(--accent)}
@@ -60,29 +67,48 @@
             <p class="page-subtitle">Creez votre compte pour demarrer votre suivi.</p>
         </div>
         <section class="card signup-card">
-            <form class="form" action="" method="post">
-                <div class="field">
-                    <label for="nom">Nom</label>
-                    <input type="text" id="nom" name="nom" placeholder="ex: Rakoto">
-                </div>
-                <div class="field">
-                    <label for="prenom">Prenom</label>
-                    <input type="text" id="prenom" name="prenom" placeholder="ex: Jean">
-                </div>
-                <div class="field">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="ex: email@domaine.com">
-                </div>
-                <div class="field">
-                    <label for="password">Mot de passe</label>
-                    <div class="password-field">
-                        <input type="password" id="password" name="password" placeholder="Votre mot de passe">
-                        <button class="toggle-password" type="button" id="toggle-password" aria-pressed="false">Voir</button>
+            <form class="form" action="/inscription/page2" method="post">
+                <div class="step active" id="step-1">
+                    <div class="step-title personal">Information personnelle</div>
+                    <div class="field">
+                        <label for="nom">Nom</label>
+                        <input type="text" id="nom" name="nom" placeholder="ex: Rakoto">
+                    </div>
+                    <div class="field">
+                        <label for="prenom">Prenom</label>
+                        <input type="text" id="prenom" name="prenom" placeholder="ex: Jean">
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="ex: email@domaine.com">
+                    </div>
+                    <div class="field">
+                        <label for="password">Mot de passe</label>
+                        <div class="password-field">
+                            <input type="password" id="password" name="password" placeholder="Votre mot de passe">
+                            <button class="toggle-password" type="button" id="toggle-password" aria-pressed="false">Voir</button>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" id="next-step">Suivant</button>
+                        <button type="reset" class="btn-secondary">Annuler</button>
                     </div>
                 </div>
-                <div class="form-actions">
-                    <button type="submit">Suivant</button>
-                    <button type="reset" class="btn-secondary">Annuler</button>
+
+                <div class="step step-2" id="step-2">
+                    <div class="step-title">Information de sante</div>
+                    <div class="field">
+                        <label for="taille">Taille (cm)</label>
+                        <input type="number" id="taille" name="taille" placeholder="ex: 170">
+                    </div>
+                    <div class="field">
+                        <label for="poids">Poids (kg)</label>
+                        <input type="number" id="poids" name="poids" placeholder="ex: 65">
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" id="prev-step" class="btn-secondary">Retour</button>
+                        <button type="submit">S'inscrire</button>
+                    </div>
                 </div>
             </form>
         </section>
@@ -96,6 +122,21 @@
             passwordInput.type = show ? 'text' : 'password';
             togglePassword.textContent = show ? 'Cacher' : 'Voir';
             togglePassword.setAttribute('aria-pressed', String(show));
+        });
+
+        const step1 = document.getElementById('step-1');
+        const step2 = document.getElementById('step-2');
+        const nextStep = document.getElementById('next-step');
+        const prevStep = document.getElementById('prev-step');
+
+        nextStep.addEventListener('click', () => {
+            step1.classList.remove('active');
+            step2.classList.add('active');
+        });
+
+        prevStep.addEventListener('click', () => {
+            step2.classList.remove('active');
+            step1.classList.add('active');
         });
     </script>
 </body>
