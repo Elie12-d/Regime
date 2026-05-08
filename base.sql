@@ -92,6 +92,15 @@ CREATE TABLE imcCategories (
     description TEXT NOT NULL
 );
 
+CREATE TABLE imcImage(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    imcCategory_id INT,
+    imageH VARCHAR(255) NOT NULL,
+    imageF VARCHAR(255) NOT NULL,
+    FOREIGN KEY (imcCategory_id) REFERENCES imcCategories(id)
+);
+
+
 INSERT INTO imcCategories (minImc, maxImc, label, description) VALUES
 (0, 16.5, 'Très mince', 'Votre santé mérite toute votre attention. Prendre soin de vous en douceur, avec une alimentation riche et équilibrée, vous aidera à gagner en énergie et bien-être.'),
 (16.5, 18.5, 'Mince', 'Vous êtes naturellement élancé(e). Veillez à bien manger à votre faim pour rester dynamique et en pleine forme.'),
@@ -131,3 +140,11 @@ INSERT INTO regimes (nom, description, categorieObjectif_id, pourcentageViande, 
 ('Hyperprotéiné sec', 'Très riche en protéines maigres pour prendre du muscle sec sans trop de gras.', 3, 25.0, 35.0, 25.0, 77500, 0.50),
 ('Gainer clean', 'Apport calorique élevé mais propre, avec glucides complexes et bonnes protéines.', 3, 30.0, 25.0, 20.0, 65000, 0.70),
 ('Omnivore renforcé', 'Mix complet pour prendre du poids de façon équilibrée et durable.', 3, 28.0, 28.0, 18.0, 62500, 0.55);
+
+INSERT INTO imcImage (imcCategory_id, imageH, imageF) VALUES
+(1, 'H tres maigre.jpg', 'F tres maigre.jpg'),
+(2, 'H maigre.jpg', 'F maigre.jpg'),
+(3, 'H en forme.jpg', 'F en forme.jpg'),
+(4, 'H surpoids.jpg', 'F surpoids.jpg'),
+(5, 'H gros.jpg', 'F gros.jpg'),
+(6, 'H tres gros.jpg', 'F tres gros.jpg');
