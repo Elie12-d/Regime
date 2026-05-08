@@ -63,7 +63,7 @@
                     <input type="password" id="password" name="password" placeholder="Votre mot de passe" >
                 </div>
                 <button type="submit">Se connecter</button>
-                <a class="btn-secondary" href="<?= site_url('register') ?>">S'inscrire</a>
+                <a class="btn-secondary" href="<?= site_url('inscription') ?>">S'inscrire</a>
             </form>
         </section>
     </main>

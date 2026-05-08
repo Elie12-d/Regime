@@ -76,7 +76,11 @@ class Home extends BaseController
             'id' => $user['id'],
             'email' => $user['email'],
         ]);
-        
+
         return redirect()->to('/dashboard');
+    }
+
+    public function inscription() {
+        return view('Inscription');
     }
 }
