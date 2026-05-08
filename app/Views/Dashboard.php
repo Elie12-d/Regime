@@ -6,6 +6,12 @@
     <title>Suivi de votre sante</title>
 </head>
 <body>
+    <div class="nav">
+        <button><a href="<?= site_url('dashboard') ?>">Dashboard</a></button>
+        <button><a href="<?= site_url('porte-monnaie') ?>">Porte-monnaie</a></button>
+        <button><a href="<?= site_url('statistiques') ?>">Statistiques</a></button>
+        <button><a href="<?= site_url('logout') ?>">Déconnexion</a></button>
+    </div>
     <fieldset>
         <legend>Votre Indice de Masse Corporelle (IMC)</legend>
         <h1><?= esc($imc) ?></h1>

@@ -9,3 +9,5 @@ $routes->get('/', 'Home::index');
 $routes->get('/dashboard', 'Home::init');
 $routes->post('/objectif/(:num)', 'ObjectifController::setObjectif/$1');
 $routes->get('/porte-monnaie', 'PorteMonnaie::index');
+$routes->get('/statistiques', 'Statistiques::index');
+$routes->get('/logout', 'AuthController::logout');
