@@ -35,13 +35,15 @@
         .page-title{font-size:2rem;font-weight:900;color:var(--accent);margin:0}
         .page-subtitle{color:var(--muted);margin:0}
         .card{background:var(--card);border-radius:var(--radius);padding:28px;border:1px solid rgba(155, 160, 122, 0.25);box-shadow:var(--shadow);display:flex;flex-direction:column;gap:16px}
+        .card.recharge{max-width:560px;width:100%;min-height:520px;margin:0 auto;}
         .balance{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
         .balance .amount{font-size:2.2rem;font-weight:900;color:var(--accent)}
         .pill{padding:6px 12px;border-radius:999px;background:rgba(108,53,104,0.08);color:var(--accent);font-weight:800;font-size:0.85rem}
         .alert{padding:12px 14px;border-radius:12px;font-weight:700}
         .alert.error{background:rgba(166, 0, 0, 0.1);color:#7a0d0d;border:1px solid rgba(166, 0, 0, 0.25)}
         .alert.success{background:rgba(0, 140, 80, 0.12);color:#0b5c3a;border:1px solid rgba(0, 140, 80, 0.25)}
-        .form{display:flex;flex-direction:column;gap:12px}
+        .form{display:flex;flex-direction:column;gap:22px}
+        .form button{margin-top:8px}
         .field{display:flex;flex-direction:column;gap:6px}
         label{font-weight:700;color:var(--text)}
         input[type="number"]{padding:12px 14px;border-radius:12px;border:2px solid rgba(155, 160, 122, 0.35);font-size:1rem;outline:none}
@@ -79,7 +81,7 @@
             <p class="page-subtitle">Consultez votre solde et rechargez votre compte en toute securite.</p>
         </div>
 
-        <section class="card">
+        <section class="card recharge">
             <?php if (isset($porteMonnaie['solde'])): ?>
                 <div class="balance">
                     <div>
