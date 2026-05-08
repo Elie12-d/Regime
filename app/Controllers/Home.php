@@ -38,6 +38,9 @@ class Home extends BaseController
         // recupere la categorie correspondnte
         $categorie = $imcCategoriesModel->getCategorieByImc($imc);
 
+        // recuperation de tout les imc
+        $imcs = $imcCategoriesModel->findAll();
+
         // get le label et la description
         $label = $categorie ? $categorie['label'] : null;
         $description = $categorie ? $categorie['description'] : "Ces donnees n'existe pas dans notre base";
@@ -51,7 +54,8 @@ class Home extends BaseController
             'imc' => $imc,
             'titre' => $label,
             'description' => $description,
-            'categorieObjectif' => $categorieObjectif
+            'categorieObjectif' => $categorieObjectif,
+            'imcs' => $imcs
         ];
         return view('Dashboard', $data);
     }
