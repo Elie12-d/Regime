@@ -6,6 +6,9 @@
     <title>Suivi de votre sante</title>
 </head>
 <body>
+    <head>
+        <a href="/porte-monnaie">Mon porte-monnaie</a>
+    </head>
     <fieldset>
         <legend>Votre Indice de Masse Corporelle (IMC)</legend>
         <h1><?= esc($imc) ?></h1>
