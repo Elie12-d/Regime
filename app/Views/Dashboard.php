@@ -155,6 +155,7 @@
         }
         form{margin:0}
         form button{all:unset;cursor:pointer}
+        
     </style>
 </head>
 <body>
