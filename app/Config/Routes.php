@@ -1,5 +1,6 @@
 <?php
 
+use App\Controllers\PaiementController;
 use CodeIgniter\Router\RouteCollection;
 
 /**
@@ -13,4 +14,6 @@ $routes->get('/traitements', 'AchatRegime::index');
 $routes->get('/statistiques', 'StatistiquesController::index');
 $routes->get('/logout', 'AuthController::logout');
 $routes->get('/liste-regimes', 'RegimeController::afficherRegimesByIdCategorie');
-$routes->get('/commande/(:num)', 'RegimeController::commanderRegime/$1');
+$routes->get('paiement/(:num)/(:num)', 'RegimeController::setCommande/$1/$2');
+$routes->post('paiement/sauvegarderSession', 'PaiementController::sauvegarderSession');
+$routes->get('paiement/traitement', 'PaiementController::index');

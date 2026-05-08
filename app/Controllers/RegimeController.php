@@ -22,13 +22,36 @@ class RegimeController extends BaseController
         // get regimes by idCategorie
         $regimes = $regimeModel->getRegimesByCategorieObjectif($donneesParcours['categorieObjectif_id']);
 
+        // get idCategorieObjectif
+        $idCategorieObjectif = $donneesParcours['categorieObjectif_id'];
+
         // passer les regimes à la vue
-        $data['regimes'] = $regimes;
+        $data = [
+            'regimes' =>$regimes,
+            'idCategorieObjectif' => $idCategorieObjectif
+        ];
         return view('ListeRegimes', $data);
     }
-    public function commanderRegime($id)
+    public function setCommande($kgOuNbJour, $idRegime)
     {
-        // redirection vers la page de commande du regime
+        // get session parcours
+        $donneesParcours = session()->get('donneesParcours');
+
+        // ajout du regime a la session
+        $donneesParcours['regime_id'] = $idRegime;
+
+        if($donneesParcours['categorieObjectif_id'] == 1) {
+            $regimeModel = new RegimesModel();
+            $regime = $regimeModel->find($idRegime);
+            $variationPoids = $regime['variationPoids'];
+            $duree = ceil($kgOuNbJour / $variationPoids);
+            $prixGold = $regime['prixParJour'] * $duree;
+        }
+
+        // mise a jour de la session
+        session()->set('donneesParcours', $donneesParcours);
+
+        // vers pop-up de confirmation de commande
         return redirect()->to(site_url('/traitements'));
     }
 }

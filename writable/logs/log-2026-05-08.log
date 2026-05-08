@@ -1291,3 +1291,104 @@ in APPPATH/Controllers/RegimeController.php on line 23.
  6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
  7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
  8 SYSTEMPATH/rewrite.php(44): require_once('/home/elie/S4/Mr Rojo/Regime/public/index.php')
+CRITICAL - 2026-05-08 22:25:33 --> ErrorException: Maximum execution time of 30 seconds exceeded
+[Method: GET, Route: paiement/traitement]
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-05-08 22:27:10 --> ErrorException: Maximum execution time of 30 seconds exceeded
+[Method: GET, Route: paiement/traitement]
+in SYSTEMPATH/BaseModel.php on line 598.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-05-08 22:31:23 --> Error: Cannot use object of type App\Models\PorteMonnaieModel as array
+[Method: GET, Route: paiement/traitement]
+in APPPATH/Controllers/PaiementController.php on line 84.
+ 1 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\PaiementController->index()
+ 2 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/elie/S4/Mr Rojo/Regime/public/index.php')
+CRITICAL - 2026-05-08 22:32:23 --> ErrorException: Undefined variable $solde
+[Method: GET, Route: paiement/traitement]
+in APPPATH/Views/Paiement.php on line 12.
+ 1 APPPATH/Views/Paiement.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/elie/S4/Mr Rojo/Regime/app/Views/Paiement.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/PaiementController.php(86): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\PaiementController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/elie/S4/Mr Rojo/Regime/public/index.php')
+CRITICAL - 2026-05-08 22:32:38 --> ErrorException: Undefined variable $solde
+[Method: GET, Route: paiement/traitement]
+in APPPATH/Views/Paiement.php on line 12.
+ 1 APPPATH/Views/Paiement.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/elie/S4/Mr Rojo/Regime/app/Views/Paiement.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/PaiementController.php(86): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\PaiementController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/elie/S4/Mr Rojo/Regime/public/index.php')
+CRITICAL - 2026-05-08 22:33:04 --> Error: Cannot use object of type App\Models\PorteMonnaieModel as array
+[Method: GET, Route: paiement/traitement]
+in APPPATH/Controllers/PaiementController.php on line 84.
+ 1 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\PaiementController->index()
+ 2 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/elie/S4/Mr Rojo/Regime/public/index.php')
+CRITICAL - 2026-05-08 22:33:18 --> Error: Cannot use object of type App\Models\PorteMonnaieModel as array
+[Method: GET, Route: paiement/traitement]
+in APPPATH/Controllers/PaiementController.php on line 84.
+ 1 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\PaiementController->index()
+ 2 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/elie/S4/Mr Rojo/Regime/public/index.php')
+CRITICAL - 2026-05-08 22:34:16 --> ErrorException: Trying to access array offset on null
+[Method: GET, Route: paiement/traitement]
+in APPPATH/Controllers/PaiementController.php on line 84.
+ 1 APPPATH/Controllers/PaiementController.php(84): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\PaiementController->index()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/elie/S4/Mr Rojo/Regime/public/index.php')
+CRITICAL - 2026-05-08 22:36:32 --> ErrorException: Trying to access array offset on null
+[Method: GET, Route: paiement/traitement]
+in APPPATH/Controllers/PaiementController.php on line 84.
+ 1 APPPATH/Controllers/PaiementController.php(84): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\PaiementController->index()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/elie/S4/Mr Rojo/Regime/public/index.php')
+CRITICAL - 2026-05-08 23:26:58 --> ErrorException: Undefined variable $poidsTotal
+[Method: GET, Route: paiement/traitement]
+in APPPATH/Controllers/PaiementController.php on line 60.
+ 1 APPPATH/Controllers/PaiementController.php(60): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\PaiementController->index()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/elie/S4/Mr Rojo/Regime/public/index.php')

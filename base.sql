@@ -131,3 +131,10 @@ INSERT INTO regimes (nom, description, categorieObjectif_id, pourcentageViande, 
 ('Hyperprotéiné sec', 'Très riche en protéines maigres pour prendre du muscle sec sans trop de gras.', 3, 25.0, 35.0, 25.0, 77500, 0.50),
 ('Gainer clean', 'Apport calorique élevé mais propre, avec glucides complexes et bonnes protéines.', 3, 30.0, 25.0, 20.0, 65000, 0.70),
 ('Omnivore renforcé', 'Mix complet pour prendre du poids de façon équilibrée et durable.', 3, 28.0, 28.0, 18.0, 62500, 0.55);
+
+INSERT INTO porteMonnaie (user_id, solde) VALUES
+(1, 150000.00),   -- elie01 (isGold = TRUE)
+(2, 75000.00),    -- sarah_dev (isGold = FALSE)
+(3, 45000.00),    -- mickael (isGold = FALSE)
+(4, 200000.00),   -- rina22 (isGold = TRUE)
+(5, 30000.00);    -- joel_pro (isGold = FALSE)
