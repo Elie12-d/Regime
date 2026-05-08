@@ -26,4 +26,9 @@ class RegimeController extends BaseController
         $data['regimes'] = $regimes;
         return view('ListeRegimes', $data);
     }
+    public function commanderRegime($id)
+    {
+        // redirection vers la page de commande du regime
+        return redirect()->to(site_url('/traitements'));
+    }
 }

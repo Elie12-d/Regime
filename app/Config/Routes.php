@@ -13,3 +13,4 @@ $routes->get('/traitements', 'AchatRegime::index');
 $routes->get('/statistiques', 'StatistiquesController::index');
 $routes->get('/logout', 'AuthController::logout');
 $routes->get('/liste-regimes', 'RegimeController::afficherRegimesByIdCategorie');
+$routes->get('/commande/(:num)', 'RegimeController::commanderRegime/$1');

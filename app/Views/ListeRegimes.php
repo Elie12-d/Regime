@@ -14,7 +14,7 @@
             <p><?= $regime['pourcentageViande'] ?>% viande</p>
             <p><?= $regime['pourcentageVolaille'] ?>% volaille</p>
             <p><?= $regime['pourcentagePoisson'] ?>% poisson</p>
-            <p>Prix par jour: <?= $regime['prixParJour'] ?>€</p>
+            <p>Prix pour une journée : <?= $regime['prixParJour'] ?> Ar</p>
             <p>Variation de poids: <?= $regime['variationPoids'] ?>kg</p>
             <p><?= $regime['description'] ?></p>
             <button><a href="<?= site_url('/commander') ?>/<?= $regime['id'] ?>">Commander</a></button>
