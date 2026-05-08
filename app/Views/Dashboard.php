@@ -9,6 +9,7 @@
     <head>
         <div class="nav">
             <button><a href="<?= site_url('porte-monnaie') ?>">Mon porte-monnaie</a></button>
+            <button><a href="<?= site_url('traitements') ?>">Mes traitements</a></button>
             <button><a href="<?= site_url('dashboard') ?>">Dashboard</a></button>
             <button><a href="<?= site_url('statistiques') ?>">Statistiques</a></button>
             <button><a href="<?= site_url('logout') ?>">Déconnexion</a></button>
