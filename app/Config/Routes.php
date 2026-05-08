@@ -8,3 +8,4 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->get('/dashboard', 'Home::init');
 $routes->post('/objectif/(:num)', 'ObjectifController::setObjectif/$1');
+$routes->get('/porte-monnaie', 'PorteMonnaie::index');
