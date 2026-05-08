@@ -606,3 +606,44 @@ in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
 13 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
 14 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
 15 SYSTEMPATH/rewrite.php(44): require_once('/home/elie/S4/Mr Rojo/Regime/public/index.php')
+CRITICAL - 2026-05-08 15:28:21 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\PorteMonnaieModel::getPorteMonnaieByUserId
+[Method: GET, Route: porte-monnaie]
+in SYSTEMPATH/Model.php on line 761.
+ 1 APPPATH/Controllers/PorteMonnaie.php(12): CodeIgniter\Model->__call()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\PorteMonnaie->index()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 15:29:25 --> ErrorException: Trying to access array offset on null
+[Method: GET, Route: porte-monnaie]
+in APPPATH/Views/PorteMonnaie.php on line 10.
+ 1 APPPATH/Views/PorteMonnaie.php(10): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/harena/Documents/ITU/S4/Système d’information/Regime/app/Views/PorteMonnaie.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/PorteMonnaie.php(14): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\PorteMonnaie->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-08 15:29:29 --> ErrorException: Trying to access array offset on null
+[Method: GET, Route: porte-monnaie]
+in APPPATH/Views/PorteMonnaie.php on line 10.
+ 1 APPPATH/Views/PorteMonnaie.php(10): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/harena/Documents/ITU/S4/Système d’information/Regime/app/Views/PorteMonnaie.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/PorteMonnaie.php(14): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\PorteMonnaie->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')

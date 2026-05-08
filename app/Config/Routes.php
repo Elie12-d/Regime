@@ -7,3 +7,4 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 $routes->get('/dashboard', 'Home::init');
+$routes->get('/porte-monnaie', 'PorteMonnaie::index');
