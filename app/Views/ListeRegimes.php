@@ -65,17 +65,78 @@
     </style>
 </head>
 <body>
-    <?php foreach ($regimes as $regime) { ?>
-        <fieldset>
-            <legend><?= $regime['nom'] ?></legend>
-            <p><?= $regime['pourcentageViande'] ?>% viande</p>
-            <p><?= $regime['pourcentageVolaille'] ?>% volaille</p>
-            <p><?= $regime['pourcentagePoisson'] ?>% poisson</p>
-            <p>Prix par jour: <?= $regime['prixParJour'] ?>€</p>
-            <p>Variation de poids: <?= $regime['variationPoids'] ?>kg</p>
-            <p><?= $regime['description'] ?></p>
-            <button><a href="<?= site_url('/commander') ?>/<?= $regime['id'] ?>">Commander</a></button>
-        </fieldset>
-    <?php } ?>
+    <header>
+        <div class="brand">
+            <div class="logo">R</div>
+            <div>
+                <div class="site-title">Regime & Sante</div>
+                <div class="page-subtitle" style="font-size:12px">Programmes nutritifs & activites personnalisees</div>
+            </div>
+        </div>
+        <nav>
+            <a class="nav-link" href="<?= site_url('porte-monnaie') ?>">Mon porte-monnaie</a>
+            <a class="nav-link" href="<?= site_url('dashboard') ?>">Dashboard</a>
+            <a class="nav-link" href="<?= site_url('statistiques') ?>">Statistiques</a>
+            <a class="nav-link" href="<?= site_url('traitements') ?>">Mes traitements</a>
+            <a class="nav-link" href="<?= site_url('logout') ?>">Deconnexion</a>
+        </nav>
+    </header>
+
+    <main>
+        <div>
+            <h1 class="page-title">Liste des regimes</h1>
+            <p class="page-subtitle">Choisissez un programme adapte a vos preferences et objectifs.</p>
+        </div>
+
+        <div class="grid">
+            <?php foreach ($regimes as $regime) { ?>
+                <article class="card">
+                    <h3><?= $regime['nom'] ?></h3>
+                    <div class="chips">
+                        <span class="chip"><?= $regime['pourcentageViande'] ?>% viande</span>
+                        <span class="chip"><?= $regime['pourcentageVolaille'] ?>% volaille</span>
+                        <span class="chip"><?= $regime['pourcentagePoisson'] ?>% poisson</span>
+                    </div>
+                    <div class="bars">
+                        <div class="bar-row">
+                            <div class="bar-label">Viande</div>
+                            <div class="bar">
+                                <div class="bar-fill meat" style="width: <?= esc($regime['pourcentageViande']) ?>%"></div>
+                            </div>
+                            <div class="bar-value"><?= esc($regime['pourcentageViande']) ?>%</div>
+                        </div>
+                        <div class="bar-row">
+                            <div class="bar-label">Volaille</div>
+                            <div class="bar">
+                                <div class="bar-fill volaille" style="width: <?= esc($regime['pourcentageVolaille']) ?>%"></div>
+                            </div>
+                            <div class="bar-value"><?= esc($regime['pourcentageVolaille']) ?>%</div>
+                        </div>
+                        <div class="bar-row">
+                            <div class="bar-label">Poisson</div>
+                            <div class="bar">
+                                <div class="bar-fill poisson" style="width: <?= esc($regime['pourcentagePoisson']) ?>%"></div>
+                            </div>
+                            <div class="bar-value"><?= esc($regime['pourcentagePoisson']) ?>%</div>
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="label">Prix par jour</div>
+                            <div class="value"><?= $regime['prixParJour'] ?> Ar</div>
+                        </div>
+                        <div class="stat">
+                            <div class="label">Variation de poids</div>
+                            <div class="value"><?= $regime['variationPoids'] ?> kg</div>
+                        </div>
+                    </div>
+                    <div class="desc"><?= $regime['description'] ?></div>
+                    <div class="cta">
+                        <a href="<?= site_url('/commander') ?>/<?= $regime['id'] ?>">Commander</a>
+                    </div>
+                </article>
+            <?php } ?>
+        </div>
+    </main>
 </body>
 </html>
