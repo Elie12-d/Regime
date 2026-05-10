@@ -6,6 +6,7 @@ use App\Models\UsersModel;
 use App\Models\InfoSanteModel;
 use App\Models\ImcCategorisModel;
 use App\Models\CategorieObjectiModel;
+use App\Models\PorteMonnaieModel;
 
 class Home extends BaseController
 {
@@ -88,6 +89,14 @@ class Home extends BaseController
                 'taille' => $taille,
                 'poids' => $poids
             ]);
+
+            // Initialiser le porte-monnaie de l'utilisateur
+            $porteMonnaieModel = new PorteMonnaieModel();
+            $porteMonnaieModel->insert([
+                'user_id' => $userId,
+                'solde' => 0.00
+            ]);
+
 
             session()->set('id', $userId);
 
