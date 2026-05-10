@@ -145,7 +145,7 @@ INSERT INTO porteMonnaie (user_id, solde) VALUES
 (2, 75000.00),    -- sarah_dev (isGold = FALSE)
 (3, 45000.00),    -- mickael (isGold = FALSE)
 (4, 200000.00),   -- rina22 (isGold = TRUE)
-(5, 3000000.00);    -- joel_pro (isGold = FALSE)
+(5, 300000.00);    -- joel_pro (isGold = FALSE)
 
 INSERT INTO imcImage (imcCategory_id, imageH, imageF) VALUES
 (1, 'H tres maigre.jpg', 'F tres maigre.jpg'),
