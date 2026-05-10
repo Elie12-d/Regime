@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes traitements</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
-    <style>
+<?php
+$title = 'Mes traitements';
+$activePage = 'traitements';
+?>
+
+<?= $this->extend('layout') ?>
+
+<?= $this->section('head') ?>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
         :root{
             --bg: #f6f4f8;
             --card: #ffffff;
@@ -205,27 +207,11 @@
             header{padding:14px 20px;flex-wrap:wrap;gap:12px}
             nav{flex-wrap:wrap;justify-content:center}
         }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="brand">
-            <div class="logo">R</div>
-            <div>
-                <div class="site-title">Regime & Sante</div>
-                <div class="muted" style="font-size:12px">Programmes nutritifs & activites personnalisees</div>
-            </div>
-        </div>
-        <nav>
-            <a class="nav-link" href="<?= site_url('porte-monnaie') ?>">Mon porte-monnaie</a>
-            <a class="nav-link" href="<?= site_url('dashboard') ?>">Dashboard</a>
-            <a class="nav-link" href="<?= site_url('statistiques') ?>">Statistiques</a>
-            <a class="nav-link primary" href="<?= site_url('traitements') ?>">Mes traitements</a>
-            <a class="nav-link" href="<?= site_url('logout') ?>">Deconnexion</a>
-        </nav>
-    </header>
+</style>
+<?= $this->endSection() ?>
 
-    <main>
+<?= $this->section('content') ?>
+<main>
         <section class="page-hero">
             <div>
                 <h1>Mes traitements</h1>
@@ -327,6 +313,5 @@
                 </section>
             <?php endforeach; ?>
         <?php endif; ?>
-    </main>
-</body>
-</html>
+</main>
+<?= $this->endSection() ?>

@@ -1,13 +1,14 @@
-<!DOCTYPE html>
-<html lang="fr">
+<?php
+$title = 'Liste des regimes';
+$activePage = '';
+?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Liste des regimes</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <style>
+<?= $this->extend('layout') ?>
+
+<?= $this->section('head') ?>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<style>
         :root {
             --bg: #f6f4f8;
             --card: #ffffff;
@@ -400,28 +401,11 @@
                 font-size: 1.7rem
             }
         }
-    </style>
-</head>
+</style>
+<?= $this->endSection() ?>
 
-<body>
-    <header>
-        <div class="brand">
-            <div class="logo">R</div>
-            <div>
-                <div class="site-title">Regime & Sante</div>
-                <div class="page-subtitle" style="font-size:12px">Programmes nutritifs & activites personnalisees</div>
-            </div>
-        </div>
-        <nav>
-            <a class="nav-link" href="<?= site_url('porte-monnaie') ?>">Mon porte-monnaie</a>
-            <a class="nav-link" href="<?= site_url('dashboard') ?>">Dashboard</a>
-            <a class="nav-link" href="<?= site_url('statistiques') ?>">Statistiques</a>
-            <a class="nav-link" href="<?= site_url('traitements') ?>">Mes traitements</a>
-            <a class="nav-link" href="<?= site_url('logout') ?>">Deconnexion</a>
-        </nav>
-    </header>
-
-    <main>
+<?= $this->section('content') ?>
+<main>
         <div class="page-hero">
             <h1 class="page-title">Liste des regimes</h1>
             <p class="page-subtitle">Choisissez un programme adapte a vos preferences et objectifs.</p>
@@ -482,8 +466,11 @@
         <div class="command-bar">
             <a href="#" onclick="commanderRegime(<?= $idCategorieObjectif ?>)">Commander</a>
         </div>
-    </main>
-    <script>
+</main>
+<?= $this->endSection() ?>
+
+<?= $this->section('scripts') ?>
+<script>
         async function commanderRegime(idCategorieObjectif) {
             // recuperation
             let checkboxes = document.querySelectorAll('.card-checkbox:checked');
@@ -572,7 +559,5 @@
                     alert("Erreur lors de la sauvegarde");
                 });
         }
-    </script>
-</body>
-
-</html>
+</script>
+<?= $this->endSection() ?>

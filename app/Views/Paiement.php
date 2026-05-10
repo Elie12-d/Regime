@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="fr">
+<?php
+$title = 'Paiement';
+$activePage = '';
+?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paiement</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <style>
+<?= $this->extend('layout') ?>
+
+<?= $this->section('head') ?>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
         :root{
             --bg: #f6f4f8;
             --card: #ffffff;
@@ -113,28 +113,11 @@
             nav{flex-wrap:wrap;justify-content:center}
             main{grid-template-columns:1fr}
         }
-    </style>
-</head>
+</style>
+<?= $this->endSection() ?>
 
-<body>
-    <header>
-        <div class="brand">
-            <div class="logo">R</div>
-            <div>
-                <div class="site-title">Regime & Sante</div>
-                <div class="subtle">Programmes nutritifs & activites personnalisees</div>
-            </div>
-        </div>
-        <nav>
-            <a class="nav-link" href="<?= site_url('porte-monnaie') ?>">Mon porte-monnaie</a>
-            <a class="nav-link" href="<?= site_url('dashboard') ?>">Dashboard</a>
-            <a class="nav-link" href="<?= site_url('statistiques') ?>">Statistiques</a>
-            <a class="nav-link" href="<?= site_url('traitements') ?>">Mes traitements</a>
-            <a class="nav-link" href="<?= site_url('logout') ?>">Deconnexion</a>
-        </nav>
-    </header>
-
-    <main>
+<?= $this->section('content') ?>
+<main>
         <section class="card">
             <h2>Liste des regimes selectionnes</h2>
             <p class="subtle">Retrouvez le detail de vos regimes avant le paiement.</p>
@@ -170,8 +153,11 @@
                 <p class="hint">Le paiement sera effectue apres validation de votre solde.</p>
             </div>
         </section>
-    </main>
-    <script>
+</main>
+<?= $this->endSection() ?>
+
+<?= $this->section('scripts') ?>
+<script>
         const listeRegimes = <?= json_encode($listeRegimes, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>;
         const prixTotal = <?= json_encode($prixTotal, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>;
         const solde = <?= json_encode($solde, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>;
@@ -247,7 +233,5 @@
                 });
             });
         }
-    </script>
-</body>
-
-</html>
+</script>
+<?= $this->endSection() ?>
