@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Liste des regimes</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg: #f6f4f8;
@@ -19,6 +19,7 @@
             --glass: rgba(108, 53, 104, 0.06);
             --radius: 20px;
             --shadow: 0 10px 30px rgba(42, 15, 53, 0.08);
+            --accent-soft: rgba(108, 53, 104, 0.12);
         }
 
         * {
@@ -31,6 +32,27 @@
             color: var(--text);
             margin: 0;
             -webkit-font-smoothing: antialiased
+        }
+        body::before,
+        body::after{
+            content:"";
+            position:fixed;
+            width:320px;
+            height:320px;
+            border-radius:50%;
+            filter:blur(0px);
+            opacity:0.28;
+            z-index:-1;
+        }
+        body::before{
+            top:-120px;
+            left:-80px;
+            background:radial-gradient(circle at 30% 30%, rgba(166, 168, 0, 0.35), transparent 60%);
+        }
+        body::after{
+            bottom:-140px;
+            right:-60px;
+            background:radial-gradient(circle at 70% 70%, rgba(108, 53, 104, 0.25), transparent 60%);
         }
 
         header {
@@ -108,86 +130,125 @@
 
         main {
             max-width: 1440px;
-            margin: 24px auto;
+            margin: 18px auto 24px;
             padding: 0 16px;
             display: flex;
             flex-direction: column;
-            gap: 18px
+            gap: 14px
         }
 
         .page-title {
-            font-size: 2.1rem;
-            font-weight: 900;
+            font-family:'Unbounded', 'Poppins', system-ui, sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700;
             color: var(--accent);
             margin: 0
         }
 
         .page-subtitle {
             color: var(--muted);
+            font-size: 0.95rem;
             margin: 0
         }
 
+
+            .page-hero{
+                display:flex;
+                align-items:flex-end;
+                justify-content:space-between;
+                gap:16px;
+                flex-wrap:wrap;
+            }
+
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 18px
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 14px
         }
 
         .card {
             background: var(--card);
             border-radius: var(--radius);
-            padding: 30px;
+            padding: 18px;
             border: 1px solid rgba(155, 160, 122, 0.25);
             box-shadow: var(--shadow);
             display: flex;
             flex-direction: column;
-            gap: 20px
+            gap: 12px;
+            position:relative;
+            overflow:hidden;
+            transition:transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+            animation:rise 0.6s ease both;
         }
+        .card::after{
+            content:"";
+            position:absolute;
+            inset:0;
+            border-radius:var(--radius);
+            border:1px solid transparent;
+            background:linear-gradient(120deg, rgba(108,53,104,0.3), rgba(166,168,0,0.35)) border-box;
+            -webkit-mask:linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite:xor;
+            mask-composite:exclude;
+            opacity:0.35;
+            pointer-events:none;
+        }
+        .card:hover{
+            transform:translateY(-6px);
+            box-shadow:0 18px 36px rgba(42, 15, 53, 0.14);
+            border-color:rgba(108,53,104,0.3);
+        }
+        .grid > .card:nth-child(1){animation-delay:0.05s}
+        .grid > .card:nth-child(2){animation-delay:0.1s}
+        .grid > .card:nth-child(3){animation-delay:0.15s}
+        .grid > .card:nth-child(4){animation-delay:0.2s}
+        .grid > .card:nth-child(5){animation-delay:0.25s}
+        .grid > .card:nth-child(6){animation-delay:0.3s}
 
         .card h3 {
             margin: 0;
-            font-size: 1.3rem;
+            font-size: 1.05rem;
             color: var(--text)
         }
 
         .chips {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 6px
+            gap: 8px;
+            margin-top: 4px
         }
 
         .chip {
-            padding: 6px 10px;
+            padding: 5px 8px;
             border-radius: 999px;
             background: rgba(108, 53, 104, 0.08);
             color: var(--accent);
             font-weight: 700;
-            font-size: 0.85rem
+            font-size: 0.75rem
         }
 
         .bars {
             display: flex;
             flex-direction: column;
-            gap: 10px
+            gap: 8px
         }
 
         .bar-row {
             display: flex;
             align-items: center;
-            gap: 10px
+            gap: 8px
         }
 
         .bar-label {
-            min-width: 80px;
-            font-size: 0.85rem;
+            min-width: 70px;
+            font-size: 0.75rem;
             color: var(--muted);
             font-weight: 700
         }
 
         .bar {
             flex: 1;
-            height: 10px;
+            height: 7px;
             background: rgba(155, 160, 122, 0.2);
             border-radius: 999px;
             overflow: hidden
@@ -213,7 +274,7 @@
         .bar-value {
             min-width: 44px;
             text-align: right;
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             font-weight: 700;
             color: var(--text)
         }
@@ -221,50 +282,107 @@
         .stats {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 12px;
-            margin-top: 8px
+            gap: 8px;
+            margin-top: 6px
         }
 
         .stat {
             background: rgba(155, 160, 122, 0.12);
             border-radius: 12px;
-            padding: 10px
+                        padding: 6px
         }
 
         .stat .label {
             color: var(--muted);
-            font-size: 0.8rem
+            font-size: 0.72rem
         }
 
         .stat .value {
             font-weight: 800;
+            font-size: 0.9rem;
             color: var(--text)
         }
 
         .desc {
             color: var(--text);
-            line-height: 1.7;
-            margin-top: 8px
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin-top: 4px
         }
 
         .cta {
-            margin-top: 14px
+            margin-top: 8px
+        }
+        .select{
+            display:inline-flex;
+            align-items:center;
+            gap:10px;
+            font-weight:800;
+            color:var(--text);
+            font-size:0.9rem;
+        }
+        .card-checkbox{
+            appearance:none;
+            width:20px;
+            height:20px;
+            border-radius:6px;
+            border:2px solid rgba(108,53,104,0.4);
+            display:grid;
+            place-items:center;
+            background:#fff;
+            cursor:pointer;
+            transition:all 0.2s ease;
+        }
+        .card-checkbox::after{
+            content:"";
+            width:10px;
+            height:10px;
+            border-radius:3px;
+            background:var(--accent);
+            transform:scale(0);
+            transition:transform 0.2s ease;
+        }
+        .card-checkbox:checked{
+            border-color:var(--accent-2);
+            box-shadow:0 0 0 4px rgba(166,168,0,0.2);
+        }
+        .card-checkbox:checked::after{
+            background:var(--accent-2);
+            transform:scale(1);
         }
 
-        .cta a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 10px 16px;
-            border-radius: 999px;
-            background: var(--accent-2);
-            color: #1d1b1b;
-            text-decoration: none;
-            font-weight: 800
+        .command-bar{
+            position:sticky;
+            bottom:16px;
+            align-self:flex-end;
+            background:rgba(255,255,255,0.9);
+            border:1px solid rgba(155, 160, 122, 0.25);
+            box-shadow:var(--shadow);
+            border-radius:999px;
+            padding:6px 8px;
+            display:flex;
+            gap:10px;
+            align-items:center;
+            backdrop-filter:blur(6px);
         }
+        .command-bar a{
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            padding:6px 12px;
+            border-radius:999px;
+            background:var(--accent-2);
+            color:#1d1b1b;
+            text-decoration:none;
+            font-weight:800;
+            text-transform:uppercase;
+            font-size:0.85rem;
+        }
+        .command-bar a:hover{background:#939700}
 
-        .cta a:hover {
-            background: #939700
+        @keyframes rise{
+            from{opacity:0;transform:translateY(12px)}
+            to{opacity:1;transform:translateY(0)}
         }
 
         @media (max-width:720px) {
@@ -303,7 +421,7 @@
     </header>
 
     <main>
-        <div>
+        <div class="page-hero">
             <h1 class="page-title">Liste des regimes</h1>
             <p class="page-subtitle">Choisissez un programme adapte a vos preferences et objectifs.</p>
         </div>
@@ -352,10 +470,15 @@
                     </div>
                     <div class="desc"><?= $regime['description'] ?></div>
                     <div class="cta">
-                        <input type="checkbox" class="card-checkbox" value="<?= $regime['id'] ?>">
+                        <label class="select">
+                            <input type="checkbox" class="card-checkbox" value="<?= $regime['id'] ?>">
+                            Selectionner
+                        </label>
                     </div>
                 </article>
             <?php } ?>
+        </div>
+        <div class="command-bar">
             <a href="#" onclick="commanderRegime(<?= $idCategorieObjectif ?>)">Commander</a>
         </div>
     </main>
