@@ -98,6 +98,16 @@ class Home extends BaseController
             ]);
 
 
+
+            $infoSanteModel = new InfoSanteModel();
+            $infoSanteModel->insert([
+                'user_id' => $userId,
+                'taille' => $taille,
+                'poids' => $poids,
+                'categorieObjectif_id' => NULL,
+                'dateEnregistrement' => date('Y-m-d H:i:s')
+            ]);
+
             session()->set('id', $userId);
 
             return redirect()->to('/dashboard');
