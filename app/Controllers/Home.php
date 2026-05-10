@@ -57,6 +57,7 @@ class Home extends BaseController
             'categorieObjectif' => $categorieObjectif,
             'imcs' => $imcs
         ];
+        $data['title'] = 'Regime -  Dashboard';
         return view('Dashboard', $data);
     }
 

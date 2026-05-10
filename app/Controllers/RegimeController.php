@@ -30,6 +30,8 @@ class RegimeController extends BaseController
             'regimes' =>$regimes,
             'idCategorieObjectif' => $idCategorieObjectif
         ];
+
+        $data['title'] = 'Regime - Liste Regimes';
         return view('ListeRegimes', $data);
     }
     public function setCommande($kgOuNbJour, $idRegime)
