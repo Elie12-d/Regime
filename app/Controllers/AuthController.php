@@ -5,7 +5,6 @@ use App\Models\UsersModel;
 
 class AuthController extends BaseController
 {
-
     public function login()
     {
         $email = $this->request->getPost('email');
