@@ -58,6 +58,7 @@ class PaiementController extends BaseController
                 'solde' => $wallet['solde'] ?? 0
             ];
 
+            $data['title'] = 'Regime - Paiement';
             return view('Paiement', $data);
         }
 
@@ -122,9 +123,10 @@ class PaiementController extends BaseController
         $data = [
             'listeRegimes' => $listeRegimes,
             'prixTotal' => $prixTotal,
-            'solde' => $wallet['solde']
+            'solde' => $wallet['solde']  
         ];
 
+        $data['title'] = 'Regime - Paiement';
         return view('Paiement', $data);
     }
 }
