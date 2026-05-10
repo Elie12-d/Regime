@@ -22,3 +22,4 @@ $routes->get('paiement/traitement', 'PaiementController::index');
 $routes->post('/porte-monnaie/recharger', 'PorteMonnaie::recharger');
 $routes->get('/commande/(:num)', 'RegimeController::commanderRegime/$1');
 $routes->get('/inscription', 'Home::inscription');
+$routes->post('/inscription/ajout', 'Home::ajoutInscription');
