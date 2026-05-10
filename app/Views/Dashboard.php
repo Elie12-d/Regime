@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Suivi de votre santé</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
-    <style>
+<?php
+$title = 'Suivi de votre sante';
+$activePage = 'dashboard';
+?>
+
+<?= $this->extend('layout') ?>
+
+<?= $this->section('head') ?>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
         :root{
             --bg: #f6f4f8; /* soft off-white */
             --card: #ffffff;
@@ -156,27 +158,11 @@
         form{margin:0}
         form button{all:unset;cursor:pointer}
         
-    </style>
-</head>
-<body>
-    <header>
-        <div class="brand">
-            <div class="logo">R</div>
-            <div>
-                <div class="site-title">Regime & Santé</div>
-                <div class="muted" style="font-size:12px">Programmes nutritifs & activités personnalisées</div>
-            </div>
-        </div>
-        <nav>
-            <a class="nav-link" href="<?= site_url('porte-monnaie') ?>">Mon porte-monnaie</a>
-            <a class="nav-link primary" href="<?= site_url('dashboard') ?>">Dashboard</a>
-            <a class="nav-link" href="<?= site_url('statistiques') ?>">Statistiques</a>
-            <a class="nav-link" href="<?= site_url('traitements') ?>">Mes traitements</a>
-            <a class="nav-link" href="<?= site_url('logout') ?>">Déconnexion</a>
-        </nav>
-    </header>
+</style>
+<?= $this->endSection() ?>
 
-    <main>
+<?= $this->section('content') ?>
+<main>
         <?php
             $imcValue = (float) str_replace(',', '.', (string) $imc);
         ?>
@@ -224,6 +210,5 @@
                 <?php } ?>
             </div>
         </div>
-    </main>
-</body>
-</html>
+</main>
+<?= $this->endSection() ?>
