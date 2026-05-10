@@ -71,12 +71,12 @@
                 <div class="step active" id="step-1">
                     <div class="step-title personal">Information personnelle</div>
                     <div class="field">
-                        <label for="nom">Nom</label>
-                        <input type="text" id="nom" name="nom" placeholder="ex: Rakoto">
+                        <label for="pseudo">Pseudo</label>
+                        <input type="text" id="pseudo" name="pseudo" placeholder="ex: Rakoto">
                     </div>
                     <div class="field">
-                        <label for="prenom">Prenom</label>
-                        <input type="text" id="prenom" name="prenom" placeholder="ex: Jean">
+                        <label for="genre">Genre</label>
+                        <input type="text" id="genre" name="genre" placeholder="ex: Homme ou Femme">
                     </div>
                     <div class="field">
                         <label for="email">Email</label>
