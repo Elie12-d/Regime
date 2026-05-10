@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Liste des regimes</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
         :root {
             --bg: #f6f4f8;
@@ -483,7 +484,7 @@
         </div>
     </main>
     <script>
-        function commanderRegime(idCategorieObjectif) {
+        async function commanderRegime(idCategorieObjectif) {
             // recuperation
             let checkboxes = document.querySelectorAll('.card-checkbox:checked');
             let idsSelectionnes = Array.from(checkboxes).map(cb => cb.value);
@@ -501,26 +502,51 @@
 
             // Definir le message du prompt selon l'objectif
             let message = "";
+            let inputLabel = "";
+            let inputStep = "0.1";
+            let inputMin = "0.1";
             if (idCategorieObjectif == 1) {
-                message = "Entrez le kg à perdre :";
+                message = "Entrez le kg a perdre";
+                inputLabel = "Kg a perdre";
             } else if (idCategorieObjectif == 2) {
-                message = "Entrez le nombre de jours :";
+                message = "Entrez le nombre de jours";
+                inputLabel = "Nombre de jours";
+                inputStep = "1";
+                inputMin = "1";
             } else if (idCategorieObjectif == 3) {
-                message = "Entrez le kg à atteindre :";
+                message = "Entrez le kg a atteindre";
+                inputLabel = "Kg a atteindre";
             }
 
-            // Demander la valeur
-            let kgOuNbJour = prompt(message, "");
+            const result = await Swal.fire({
+                title: message,
+                input: 'number',
+                inputLabel: inputLabel,
+                inputAttributes: {
+                    min: inputMin,
+                    step: inputStep,
+                },
+                inputPlaceholder: inputLabel,
+                showCancelButton: true,
+                confirmButtonText: 'Valider',
+                cancelButtonText: 'Annuler',
+                confirmButtonColor: '#6c3568',
+                inputValidator: (value) => {
+                    if (!value) {
+                        return 'Veuillez entrer une valeur';
+                    }
+                    if (Number.isNaN(parseFloat(value)) || parseFloat(value) <= 0) {
+                        return 'Valeur invalide';
+                    }
+                    return undefined;
+                }
+            });
 
-            // Valider la saisie
-            if (kgOuNbJour === null) {
-                alert("Saisie annulée");
+            if (!result.isConfirmed) {
                 return;
             }
-            if (kgOuNbJour === "") {
-                alert("Veuillez entrer une valeur");
-                return;
-            }
+
+            const kgOuNbJour = parseFloat(result.value);
 
             // Envoyer les données
             fetch("<?= site_url('paiement/sauvegarderSession') ?>", {
