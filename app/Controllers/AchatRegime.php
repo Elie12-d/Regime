@@ -8,7 +8,20 @@ use App\Models\PorteMonnaieModel;
 class AchatRegime extends BaseController {
     public function index()
     {
-        return view('AchatRegime');
+        $model = new AchatRegimeModel();
+        $listRegimes = $model->getAchatByUserId(session()->get('id'));
+        $listRegimesByDate = [];
+
+        foreach ($listRegimes as $regime) {
+            $dateKey = $regime['dateAchat'];
+            if (!isset($listRegimesByDate[$dateKey])) {
+                $listRegimesByDate[$dateKey] = [];
+            }
+            $listRegimesByDate[$dateKey][] = $regime;
+        }
+
+        $data['listRegimesByDate'] = $listRegimesByDate;
+        return view('listTraitement', $data);
     }
 
     public function payer()
