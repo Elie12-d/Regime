@@ -108,9 +108,7 @@ class Home extends BaseController
                 'dateEnregistrement' => date('Y-m-d H:i:s')
             ]);
 
-            session()->set('id', $userId);
-
-            return redirect()->to('/dashboard');
+            return redirect()->to('/');
         } else {
             return redirect()->to('/inscription')->with('error', 'Une erreur est survenue lors de l\'inscription. Veuillez réessayer.');
         }

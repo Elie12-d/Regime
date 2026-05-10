@@ -19,6 +19,7 @@ class InfoSanteModel extends Model
         if ($taille <= 0 || $poids <= 0) {
             return null;
         }
-        return round($poids / ($taille * $taille), 1);
+        $tailleM = $taille / 100;
+        return round($poids / ($tailleM * $tailleM), 1);
     }
 }
