@@ -204,3 +204,47 @@ in APPPATH/Controllers/Home.php on line 33.
  6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
  7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
  8 SYSTEMPATH/rewrite.php(44): require_once('/home/elie/S4/Mr Rojo/Regime/public/index.php')
+CRITICAL - 2026-05-10 17:26:33 --> ErrorException: Trying to access array offset on null
+[Method: GET, Route: dashboard]
+in APPPATH/Controllers/Home.php on line 33.
+ 1 APPPATH/Controllers/Home.php(33): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-10 17:26:36 --> ErrorException: Trying to access array offset on null
+[Method: GET, Route: dashboard]
+in APPPATH/Controllers/Home.php on line 33.
+ 1 APPPATH/Controllers/Home.php(33): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-10 17:26:38 --> ErrorException: Trying to access array offset on null
+[Method: GET, Route: dashboard]
+in APPPATH/Controllers/Home.php on line 33.
+ 1 APPPATH/Controllers/Home.php(33): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-10 17:27:37 --> ErrorException: Trying to access array offset on null
+[Method: GET, Route: dashboard]
+in APPPATH/Controllers/Home.php on line 33.
+ 1 APPPATH/Controllers/Home.php(33): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->init()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
