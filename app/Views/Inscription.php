@@ -67,7 +67,7 @@
             <p class="page-subtitle">Creez votre compte pour demarrer votre suivi.</p>
         </div>
         <section class="card signup-card">
-            <form class="form" action="/inscription/page2" method="post">
+            <form class="form" action="/inscription/ajout" method="post">
                 <div class="step active" id="step-1">
                     <div class="step-title personal">Information personnelle</div>
                     <div class="field">

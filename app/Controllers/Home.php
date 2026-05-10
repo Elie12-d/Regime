@@ -62,4 +62,38 @@ class Home extends BaseController
     public function inscription() {
         return view('Inscription');
     }
+
+    public function ajoutInscription() {
+        $pseudo = $this->request->getPost('pseudo');
+        $genre = $this->request->getPost('genre');
+        $email = $this->request->getPost('email');
+        $password = $this->request->getPost('password');
+        $taille = $this->request->getPost('taille');
+        $poids = $this->request->getPost('poids');
+
+        // Enregistrer les données dans la base de données
+        $usersModel = new UsersModel();
+        $userId = $usersModel->insert([
+            'pseudo' => $pseudo,
+            'genre' => $genre,
+            'email' => $email,
+            'password' => $password
+        ]);
+
+        if ($userId) {
+            // Enregistrer les informations de santé
+            $infoSanteModel = new InfoSanteModel();
+            $infoSanteModel->insert([
+                'user_id' => $userId,
+                'taille' => $taille,
+                'poids' => $poids
+            ]);
+
+            session()->set('id', $userId);
+
+            return redirect()->to('/dashboard');
+        } else {
+            return redirect()->to('/inscription')->with('error', 'Une erreur est survenue lors de l\'inscription. Veuillez réessayer.');
+        }
+    }
 }
