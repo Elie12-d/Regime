@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paiement</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
         :root{
             --bg: #f6f4f8;
@@ -177,12 +178,24 @@
 
         function payer(listeRegime, prixTotal, soldeUtilisateur) {
             if (!Array.isArray(listeRegime) || listeRegime.length === 0) {
-                alert('Aucun régime sélectionné pour le paiement.');
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Aucun regime selectionne',
+                    text: 'Veuillez choisir au moins un regime avant le paiement.',
+                    confirmButtonText: 'OK',
+                    confirmButtonColor: '#6c3568'
+                });
                 return;
             }
 
             if (parseFloat(soldeUtilisateur) < parseFloat(prixTotal)) {
-                alert('Solde insuffisant. Veuillez recharger votre porte-monnaie.');
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Solde insuffisant',
+                    text: 'Veuillez recharger votre porte-monnaie avant de payer.',
+                    confirmButtonText: 'Recharger',
+                    confirmButtonColor: '#6c3568'
+                });
                 return;
             }
 
@@ -205,14 +218,33 @@
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    alert(data.message || 'Paiement réussi.');
-                    window.location.reload();
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Paiement reussi',
+                        text: data.message || 'Votre paiement a ete valide.',
+                        confirmButtonText: 'OK',
+                        confirmButtonColor: '#6c3568'
+                    }).then(() => {
+                        window.location.reload();
+                    });
                 } else {
-                    alert(data.message || 'Le paiement a échoué.');
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Paiement echoue',
+                        text: data.message || 'Le paiement a echoue. Veuillez reessayer.',
+                        confirmButtonText: 'OK',
+                        confirmButtonColor: '#6c3568'
+                    });
                 }
             })
             .catch(() => {
-                alert('Erreur réseau lors du paiement.');
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Erreur reseau',
+                    text: 'Erreur reseau lors du paiement. Veuillez reessayer.',
+                    confirmButtonText: 'OK',
+                    confirmButtonColor: '#6c3568'
+                });
             });
         }
     </script>
