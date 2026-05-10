@@ -122,11 +122,11 @@ INSERT INTO categorieObjectif (label) VALUES
 ('Prise de masse');
 
 INSERT INTO infoSante (user_id, poids, taille, categorieObjectif_id, dateEnregistrement) VALUES
-(1, 48.0, 1.75, 1, '2024-01-15'),  -- IMC ≈ 15.7 → Très mince
-(2, 56.0, 1.72, 2, '2024-01-20'),  -- IMC ≈ 18.9 → En forme
-(3, 78.0, 1.68, 3, '2024-02-01'),  -- IMC ≈ 27.7 → Surpoids
-(4, 95.0, 1.70, 2, '2024-02-10'),  -- IMC ≈ 32.9 → Gros
-(5, 120.0, 1.65, 1, '2024-02-15'); -- IMC ≈ 44.1 → Très gros
+(1, 48.0, 175, 1, '2024-01-15'),  -- IMC ≈ 15.7 → Très mince
+(2, 56.0, 172, 2, '2024-01-20'),  -- IMC ≈ 18.9 → En forme
+(3, 78.0, 168, 3, '2024-02-01'),  -- IMC ≈ 27.7 → Surpoids
+(4, 95.0, 170, 2, '2024-02-10'),  -- IMC ≈ 32.9 → Gros
+(5, 120.0, 165, 1, '2024-02-15'); -- IMC ≈ 44.1 → Très gros
 
 INSERT INTO regimes (nom, description, categorieObjectif_id, pourcentageViande, pourcentageVolaille, pourcentagePoisson, prixParJour, variationPoids) VALUES
 ('Méditerranéen léger', 'Riche en légumes, poissons maigres et huile d''olive. Idéal pour une perte de poids progressive.', 1, 15.0, 10.0, 25.0, 42500, -0.30),
