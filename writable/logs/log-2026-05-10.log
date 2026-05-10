@@ -350,6 +350,7 @@ in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
  8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
  9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
 10 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
+CRITICAL - 2026-05-10 19:39:16 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Statistiques.php"
 CRITICAL - 2026-05-10 19:34:21 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Statistiques.php"
 [Method: GET, Route: statistiques]
 in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
@@ -362,4 +363,5 @@ in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
  7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
  9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/harena/Documents/ITU/S4/Système d’information/Regime/public/index.php')
 10 SYSTEMPATH/rewrite.php(44): require_once('/home/elie/S4/Mr Rojo/Regime/public/index.php')

@@ -65,6 +65,21 @@
         }
         .page-hero h1{margin:0;font-size:2rem;color:var(--accent);font-weight:900}
         .page-hero p{margin:6px 0 0;color:var(--muted);font-size:1rem}
+        .export-btn{
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            padding:10px 18px;
+            border-radius:999px;
+            border:3px solid var(--accent);
+            background:linear-gradient(180deg,#ffffff,rgba(108,53,104,0.06));
+            color:var(--accent);
+            text-decoration:none;
+            font-weight:900;
+            text-transform:uppercase;
+            transition:all 0.25s ease;
+        }
+        .export-btn:hover{background:var(--accent-2);color:#1d1b1b;border-color:var(--accent-2);transform:translateY(-2px);box-shadow:0 12px 24px rgba(106, 110, 166, 0.28)}
 
         .day-card{
             background:var(--card);
@@ -216,6 +231,7 @@
                 <h1>Mes traitements</h1>
                 <p>Historique des regimes achetes, groupe par jour.</p>
             </div>
+            <a class="export-btn" href="<?= site_url('traitements/pdf') ?>" target="_blank" rel="noopener">Exporter PDF</a>
         </section>
 
         <?php if (empty($listRegimesByDate)): ?>

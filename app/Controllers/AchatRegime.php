@@ -100,4 +100,18 @@ class AchatRegime extends BaseController {
             'message' => 'Paiement effectué avec succès.'
         ]);
     }
+
+    public function exportPdf()
+    {
+        $userId = session()->get('id');
+        if (!$userId) {
+            return redirect()->to('/');
+        }
+
+        $model = new AchatRegimeModel();
+        $listRegimes = $model->getAchatByUserId($userId);
+
+        require APPPATH . 'Views/pdf.php';
+        return null;
+    }
 }
