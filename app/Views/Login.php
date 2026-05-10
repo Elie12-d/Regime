@@ -53,7 +53,7 @@
             <p class="page-subtitle">Accedez a votre espace pour suivre votre progression.</p>
         </div>
         <section class="card login-card">
-            <form class="form" action="<?= site_url('dashboard') ?>" method="get">
+            <form class="form" action="<?= site_url('login') ?>" method="post">
                 <div class="field">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="ex: email@domaine.com" >

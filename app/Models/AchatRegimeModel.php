@@ -8,7 +8,7 @@ class AchatRegimeModel extends Model
 {
     protected $table = 'achatRegime';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['user_id', 'regime_id', 'prixPaye', 'dateAchat', 'dateDebut', 'dateFin'];
+    protected $allowedFields = ['user_id', 'regime_id', 'quantite', 'prixPaye', 'dateAchat'];
 
     public function getAchatByUserId($userId)
     {

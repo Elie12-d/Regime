@@ -103,6 +103,7 @@ class PaiementController extends BaseController
             $prixTotal += $regimeModel->getPrixRegimeById($id) * $nombre;
             $regime = $regimeModel->find($id);
             $listeRegimes[] = [
+                'id' => $regime['id'],
                 'nom' => $regime['nom'],
                 'description' => $regime['description'],
                 'prix' => $regime['prixParJour'],
