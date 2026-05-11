@@ -91,6 +91,9 @@
         </div>
     </footer>
 
+    <!-- SweetAlert2 (globally available for all pages) -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <?= $this->renderSection('scripts') ?>
 </body>
 </html>
