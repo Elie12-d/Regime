@@ -8,16 +8,14 @@ class AchatRegimeModel extends Model
 {
     protected $table = 'achatRegime';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['user_id', 'regime_id', 'prixPaye', 'dateAchat', 'dateDebut', 'dateFin'];
+    protected $allowedFields = ['user_id', 'regime_id', 'quantite', 'prixPaye', 'dateAchat'];
 
     public function getAchatByUserId($userId)
     {
-        $regime =  $this->where('user_id', $userId)->findAll();
-        
-        if ($regime) {
-            return true;
-        }   else {
-            return false;
-        }
+        return $this->select('achatRegime.id as achat_id, achatRegime.quantite, achatRegime.prixPaye, achatRegime.dateAchat, regimes.*')
+            ->join('regimes', 'regimes.id = achatRegime.regime_id')
+            ->where('achatRegime.user_id', $userId)
+            ->orderBy('achatRegime.dateAchat', 'DESC')
+            ->findAll();
     }
 }

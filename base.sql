@@ -76,10 +76,9 @@ CREATE TABLE achatRegime (
     id INT PRIMARY KEY AUTO_INCREMENT,
     user_id INT,
     regime_id INT,
+    quantite INT,
     prixPaye FLOAT NOT NULL,
     dateAchat DATE NOT NULL,
-    dateDebut DATE NOT NULL,
-    dateFin DATE NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY (regime_id) REFERENCES regimes(id)
 );
@@ -91,6 +90,15 @@ CREATE TABLE imcCategories (
     label VARCHAR(20) NOT NULL,
     description TEXT NOT NULL
 );
+
+CREATE TABLE imcImage(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    imcCategory_id INT,
+    imageH VARCHAR(255) NOT NULL,
+    imageF VARCHAR(255) NOT NULL,
+    FOREIGN KEY (imcCategory_id) REFERENCES imcCategories(id)
+);
+
 
 INSERT INTO imcCategories (minImc, maxImc, label, description) VALUES
 (0, 16.5, 'Très mince', 'Votre santé mérite toute votre attention. Prendre soin de vous en douceur, avec une alimentation riche et équilibrée, vous aidera à gagner en énergie et bien-être.'),
@@ -114,11 +122,11 @@ INSERT INTO categorieObjectif (label) VALUES
 ('Prise de masse');
 
 INSERT INTO infoSante (user_id, poids, taille, categorieObjectif_id, dateEnregistrement) VALUES
-(1, 48.0, 1.75, 1, '2024-01-15'),  -- IMC ≈ 15.7 → Très mince
-(2, 56.0, 1.72, 2, '2024-01-20'),  -- IMC ≈ 18.9 → En forme
-(3, 78.0, 1.68, 3, '2024-02-01'),  -- IMC ≈ 27.7 → Surpoids
-(4, 95.0, 1.70, 2, '2024-02-10'),  -- IMC ≈ 32.9 → Gros
-(5, 120.0, 1.65, 1, '2024-02-15'); -- IMC ≈ 44.1 → Très gros
+(1, 48.0, 175, 1, '2024-01-15'),  -- IMC ≈ 15.7 → Très mince
+(2, 56.0, 172, 2, '2024-01-20'),  -- IMC ≈ 18.9 → En forme
+(3, 78.0, 168, 3, '2024-02-01'),  -- IMC ≈ 27.7 → Surpoids
+(4, 95.0, 170, 2, '2024-02-10'),  -- IMC ≈ 32.9 → Gros
+(5, 120.0, 165, 1, '2024-02-15'); -- IMC ≈ 44.1 → Très gros
 
 INSERT INTO regimes (nom, description, categorieObjectif_id, pourcentageViande, pourcentageVolaille, pourcentagePoisson, prixParJour, variationPoids) VALUES
 ('Méditerranéen léger', 'Riche en légumes, poissons maigres et huile d''olive. Idéal pour une perte de poids progressive.', 1, 15.0, 10.0, 25.0, 42500, -0.30),
@@ -131,3 +139,40 @@ INSERT INTO regimes (nom, description, categorieObjectif_id, pourcentageViande, 
 ('Hyperprotéiné sec', 'Très riche en protéines maigres pour prendre du muscle sec sans trop de gras.', 3, 25.0, 35.0, 25.0, 77500, 0.50),
 ('Gainer clean', 'Apport calorique élevé mais propre, avec glucides complexes et bonnes protéines.', 3, 30.0, 25.0, 20.0, 65000, 0.70),
 ('Omnivore renforcé', 'Mix complet pour prendre du poids de façon équilibrée et durable.', 3, 28.0, 28.0, 18.0, 62500, 0.55);
+
+INSERT INTO porteMonnaie (user_id, solde) VALUES
+(1, 150000.00),   -- elie01 (isGold = TRUE)
+(2, 75000.00),    -- sarah_dev (isGold = FALSE)
+(3, 45000.00),    -- mickael (isGold = FALSE)
+(4, 200000.00),   -- rina22 (isGold = TRUE)
+(5, 300000.00);    -- joel_pro (isGold = FALSE)
+
+INSERT INTO imcImage (imcCategory_id, imageH, imageF) VALUES
+(1, 'H tres maigre.jpg', 'F tres maigre.jpg'),
+(2, 'H maigre.jpg', 'F maigre.jpg'),
+(3, 'H en forme.jpg', 'F en forme.jpg'),
+(4, 'H surpoids.jpg', 'F surpoids.jpg'),
+(5, 'H gros.jpg', 'F gros.jpg'),
+(6, 'H tres gros.jpg', 'F tres gros.jpg');
+
+INSERT INTO codes (codeValeur, montant, isUsed) VALUES
+('1234567890', 5000, FALSE),
+('2345678901', 10000, FALSE),
+('3456789012', 15000, FALSE),
+('4567890123', 20000, FALSE),
+('5678901234', 25000, FALSE),
+('6789012345', 30000, FALSE),
+('7890123456', 35000, FALSE),
+('8901234567', 40000, FALSE),
+('9012345678', 45000, FALSE),
+('0123456789', 50000, FALSE),
+('1122334455', 55000, FALSE),
+('2233445566', 60000, FALSE),
+('3344556677', 65000, FALSE),
+('4455667788', 70000, FALSE),
+('5566778899', 75000, FALSE),
+('6677889900', 80000, FALSE),
+('7788990011', 85000, FALSE),
+('8899001122', 90000, FALSE),
+('9900112233', 95000, FALSE),
+('0011223344', 100000, FALSE);

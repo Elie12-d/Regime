@@ -6,6 +6,7 @@ class StatistiquesController extends BaseController
     public function index()
     {
         // Afficher les statistiques de l'utilisateur
-        return view('Statistiques');
+        $data['title'] = 'Regime - Statistiques';
+        return view('Statistiques', $data);
     }
 }

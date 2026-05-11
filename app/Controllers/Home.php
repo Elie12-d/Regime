@@ -6,12 +6,12 @@ use App\Models\UsersModel;
 use App\Models\InfoSanteModel;
 use App\Models\ImcCategorisModel;
 use App\Models\CategorieObjectiModel;
+use App\Models\PorteMonnaieModel;
 
 class Home extends BaseController
 {
     public function index()
     {
-        session()->set('id', 3);
         return view('Login');
     }
     public function testConnexion()
@@ -57,6 +57,61 @@ class Home extends BaseController
             'categorieObjectif' => $categorieObjectif,
             'imcs' => $imcs
         ];
+        $data['title'] = 'Regime -  Dashboard';
         return view('Dashboard', $data);
+    }
+
+    public function inscription() {
+        return view('Inscription');
+    }
+
+    public function ajoutInscription() {
+        $pseudo = $this->request->getPost('pseudo');
+        $genre = $this->request->getPost('genre');
+        $email = $this->request->getPost('email');
+        $password = $this->request->getPost('password');
+        $taille = $this->request->getPost('taille');
+        $poids = $this->request->getPost('poids');
+
+        // Enregistrer les données dans la base de données
+        $usersModel = new UsersModel();
+        $userId = $usersModel->insert([
+            'pseudo' => $pseudo,
+            'genre' => $genre,
+            'email' => $email,
+            'password' => $password
+        ]);
+
+        if ($userId) {
+            // Enregistrer les informations de santé
+            $infoSanteModel = new InfoSanteModel();
+            $infoSanteModel->insert([
+                'user_id' => $userId,
+                'taille' => $taille,
+                'poids' => $poids
+            ]);
+
+            // Initialiser le porte-monnaie de l'utilisateur
+            $porteMonnaieModel = new PorteMonnaieModel();
+            $porteMonnaieModel->insert([
+                'user_id' => $userId,
+                'solde' => 0.00
+            ]);
+
+
+
+            $infoSanteModel = new InfoSanteModel();
+            $infoSanteModel->insert([
+                'user_id' => $userId,
+                'taille' => $taille,
+                'poids' => $poids,
+                'categorieObjectif_id' => NULL,
+                'dateEnregistrement' => date('Y-m-d H:i:s')
+            ]);
+
+            return redirect()->to('/');
+        } else {
+            return redirect()->to('/inscription')->with('error', 'Une erreur est survenue lors de l\'inscription. Veuillez réessayer.');
+        }
     }
 }
