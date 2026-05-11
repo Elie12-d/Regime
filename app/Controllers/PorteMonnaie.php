@@ -13,6 +13,7 @@ class PorteMonnaie extends BaseController
         $porteMonnaie = $model->getPorteMonnaieByUserId(session()->get('id'));
         $data['porteMonnaie'] = $porteMonnaie;
         $data['title'] = 'Regime - Porte Monnaie';
+        $data['activePage'] = 'wallet';
         return view('PorteMonnaie', $data);
     }
 

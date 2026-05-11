@@ -154,6 +154,10 @@
             background:#fff;
             transition:all 0.25s ease;
         }
+        /* radio group for genre */
+        .radio-group{display:flex;gap:12px;align-items:center}
+        .radio-group label{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;background:#fff;border:1px solid rgba(31,47,36,0.06);cursor:pointer;font-weight:700}
+        .radio-group input[type="radio"]{accent-color:var(--accent)}
         .password-field{position:relative;display:flex;align-items:center}
         .password-field input{width:100%;padding-right:72px}
         .toggle-password{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:transparent;border:none;color:var(--accent);font-weight:800;cursor:pointer}
@@ -270,8 +274,17 @@
                         <input type="text" id="pseudo" name="pseudo" placeholder="ex: Rakoto">
                     </div>
                     <div class="field">
-                        <label for="genre">Genre</label>
-                        <input type="text" id="genre" name="genre" placeholder="ex: Homme ou Femme">
+                        <label>Genre</label>
+                        <div class="radio-group" role="radiogroup" aria-label="Genre">
+                            <label>
+                                <input type="radio" name="genre" value="Homme" checked>
+                                Homme
+                            </label>
+                            <label>
+                                <input type="radio" name="genre" value="Femme">
+                                Femme
+                            </label>
+                        </div>
                     </div>
                     <div class="field">
                         <label for="email">Email</label>
