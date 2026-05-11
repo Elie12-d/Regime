@@ -20,6 +20,6 @@ class InfoSanteModel extends Model
             return null;
         }
         $tailleM = $taille / 100;
-        return round($poids / ($tailleM * $taille), 1);
+        return round($poids / ($tailleM * $tailleM), 1);
     }
 }
