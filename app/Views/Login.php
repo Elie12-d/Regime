@@ -38,6 +38,10 @@
         button:hover{background:#939700}
         .btn-secondary{display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:999px;border:2px solid var(--accent);color:var(--accent);font-weight:900;text-decoration:none}
         .btn-secondary:hover{background:rgba(108, 53, 104, 0.08)}
+        .alert{position:relative;margin:0 0 18px;padding:12px 14px 12px 42px;border-radius:12px;font-size:.93rem;font-weight:600;line-height:1.45}
+        .alert::before{content:"!";position:absolute;left:14px;top:50%;transform:translateY(-50%);width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:900}
+        .alert-error{background:linear-gradient(180deg,#fff4f3,#ffe6e3);color:#7a1f2a;border:1px solid #f0b1b5;box-shadow:0 8px 18px rgba(122,31,42,.08)}
+        .alert-error::before{background:#c93b4e;color:#fff}
 
         @media (max-width:720px){
             main{margin:28px auto}
@@ -53,6 +57,9 @@
             <p class="page-subtitle">Accedez a votre espace pour suivre votre progression.</p>
         </div>
         <section class="card login-card">
+            <?php if (session()->getFlashdata('error')) { ?>
+                <div class="alert alert-error"><?= esc((string) session()->getFlashdata('error')) ?></div>
+            <?php } ?>
             <form class="form" action="<?= site_url('login') ?>" method="post">
                 <div class="field">
                     <label for="email">Email</label>

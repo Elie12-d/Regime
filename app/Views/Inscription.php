@@ -27,8 +27,8 @@
         .card{background:var(--card);border-radius:var(--radius);padding:40px;border:1px solid rgba(155, 160, 122, 0.25);box-shadow:var(--shadow);min-height:440px}
         .logo-badge{width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,var(--accent),var(--accent-4));display:flex;align-items:center;justify-content:center;font-weight:900;color:white;font-size:2rem;box-shadow:0 8px 20px rgba(42, 15, 53, 0.12)}
         .signup-card{width:100%;max-width:440px}
-        .form{display:flex;flex-direction:column;gap:20px}
-        .field{display:flex;flex-direction:column;gap:6px}
+        .form{display:flex;flex-direction:column;gap:26px}
+        .field{display:flex;flex-direction:column;gap:8px;margin-bottom:4px}
         label{font-weight:700;color:var(--text)}
         input[type="text"],
         input[type="email"],
@@ -46,12 +46,16 @@
         .step-title{font-size:1.2rem;font-weight:900;color:var(--accent);margin:0 0 10px}
         .step-title.personal{margin-bottom:14px}
         .step-2 input[type="number"]{padding:16px 16px;font-size:1.05rem}
-        .form-actions{display:flex;gap:12px}
+        .form-actions{display:flex;gap:14px;margin-top:14px}
         .form-actions button{flex:1}
         .btn-secondary{background:rgba(108,53,104,0.12);color:var(--accent);border:2px solid var(--accent)}
         .btn-secondary:hover{background:rgba(108,53,104,0.2)}
         button{padding:12px 16px;border:none;border-radius:999px;background:var(--accent-2);color:#1d1b1b;font-weight:900;cursor:pointer}
         button:hover{background:#939700}
+        .alert{position:relative;margin:0 0 18px;padding:12px 14px 12px 42px;border-radius:12px;font-size:.93rem;font-weight:600;line-height:1.45}
+        .alert::before{content:"!";position:absolute;left:14px;top:50%;transform:translateY(-50%);width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:900}
+        .alert-error{background:linear-gradient(180deg,#fff4f3,#ffe6e3);color:#7a1f2a;border:1px solid #f0b1b5;box-shadow:0 8px 18px rgba(122,31,42,.08)}
+        .alert-error::before{background:#c93b4e;color:#fff}
 
         @media (max-width:720px){
             main{margin:28px auto}
@@ -67,6 +71,10 @@
             <p class="page-subtitle">Creez votre compte pour demarrer votre suivi.</p>
         </div>
         <section class="card signup-card">
+
+                <?php if (session()->getFlashdata('error')) { ?>
+                    <div class="alert alert-error"><?= esc((string) session()->getFlashdata('error')) ?></div>
+                <?php } ?>
             <form class="form" action="/inscription/ajout" method="post">
                 <div class="step active" id="step-1">
                     <div class="step-title personal">Information personnelle</div>
