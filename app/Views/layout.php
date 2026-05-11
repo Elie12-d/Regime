@@ -17,16 +17,42 @@
         .page-content {
             flex: 1;
         }
+        /* Header & site styles (aligned with Dashboard view) */
+        :root{
+            --bg: #f6f4f8;
+            --card: #ffffff;
+            --muted: #6b6d8f;
+            --text: #2a0f35;
+            --accent: #6c3568;
+            --accent-2: #a6a800;
+            --accent-3: #9ba07a;
+            --accent-4: #6a6ea6;
+            --glass: rgba(108, 53, 104, 0.06);
+            --radius: 20px;
+            --shadow: 0 10px 30px rgba(42, 15, 53, 0.08);
+        }
+
+        header{
+            display:flex;align-items:center;justify-content:space-between;padding:14px 28px;background:linear-gradient(90deg,#ffffff,rgba(108,53,104,0.04));position:sticky;top:0;z-index:20;box-shadow:0 2px 10px rgba(0,0,0,0.04)
+        }
+        .brand{display:flex;gap:12px;align-items:center}
+        .logo{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-4));display:flex;align-items:center;justify-content:center;font-weight:900;color:white;font-size:1.4rem}
+        .site-title{font-weight:900;font-size:1.05rem;color:var(--accent);text-transform:uppercase;letter-spacing:0.8px}
+        nav{display:flex;gap:12px;align-items:center}
+        .nav-link{padding:8px 14px;border-radius:22px;text-decoration:none;color:var(--text);font-weight:700;transition:all .18s;border:2px solid transparent}
+        .nav-link:hover{background:var(--glass);color:var(--accent)}
+        .nav-link.primary{background:var(--accent);color:white;box-shadow:0 4px 10px rgba(108,53,104,0.18)}
+
         .site-footer {
             margin-top: auto;
-            padding: 16px 24px;
+            padding: 12px 20px;
             text-align: center;
-            color: #6b6d8f;
+            color: var(--muted);
             font-size: 0.9rem;
             font-weight: 600;
-            border-top: 1px solid rgba(155, 160, 122, 0.25);
-            background: linear-gradient(180deg, #ffffff, rgba(108, 53, 104, 0.04));
-            box-shadow: 0 -6px 18px rgba(42, 15, 53, 0.06);
+            border-top: 1px solid rgba(155, 160, 122, 0.18);
+            background: linear-gradient(180deg, #ffffff, rgba(108, 53, 104, 0.03));
+            box-shadow: 0 -6px 18px rgba(42, 15, 53, 0.04);
         }
     </style>
     <?= $this->renderSection('head') ?>

@@ -313,5 +313,5 @@ $activePage = 'traitements';
                 </section>
             <?php endforeach; ?>
         <?php endif; ?>
-</main>
+</main> 
 <?= $this->endSection() ?>
