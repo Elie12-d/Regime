@@ -22,6 +22,7 @@ class AchatRegime extends BaseController {
 
         $data['listRegimesByDate'] = $listRegimesByDate;
         $data['title'] = 'Regime - Liste Traitements';
+        $data['activePage'] = 'traitements';
         return view('listTraitement', $data);
     }
 

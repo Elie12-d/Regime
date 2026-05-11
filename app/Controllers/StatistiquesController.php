@@ -108,6 +108,7 @@ class StatistiquesController extends BaseController
             'regimesCounts' => $regimesCounts,
             'chartData' => json_encode($chartData)
         ];
+        $data['activePage'] = 'statistiques';
 
         return view('Statistiques', $data);
     }
