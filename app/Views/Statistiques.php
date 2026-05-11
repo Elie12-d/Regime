@@ -1,6 +1,6 @@
 <?php
 $title = 'Statistiques';
-$activePage = 'statistiques';
+$activePage = 'Statistiques';
 ?>
 
 <?= $this->extend('layout') ?>
@@ -110,7 +110,6 @@ $activePage = 'statistiques';
                 <h1 class="page-title">📊 Suivi de votre Régime</h1>
                 <p class="page-subtitle">Suivez votre progression et vos objectifs</p>
             </div>
-            <a href="<?= site_url('dashboard') ?>" class="back-btn">Retour au Tableau de Bord</a>
         </div>
 
         <!-- Stat Cards -->

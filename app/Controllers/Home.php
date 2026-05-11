@@ -58,6 +58,7 @@ class Home extends BaseController
             'imcs' => $imcs
         ];
         $data['title'] = 'Regime -  Dashboard';
+        $data['activePage'] = 'dashboard';
         return view('Dashboard', $data);
     }
 
@@ -83,22 +84,12 @@ class Home extends BaseController
         ]);
 
         if ($userId) {
-            // Enregistrer les informations de santé
-            $infoSanteModel = new InfoSanteModel();
-            $infoSanteModel->insert([
-                'user_id' => $userId,
-                'taille' => $taille,
-                'poids' => $poids
-            ]);
-
             // Initialiser le porte-monnaie de l'utilisateur
             $porteMonnaieModel = new PorteMonnaieModel();
             $porteMonnaieModel->insert([
                 'user_id' => $userId,
                 'solde' => 0.00
             ]);
-
-
 
             $infoSanteModel = new InfoSanteModel();
             $infoSanteModel->insert([
@@ -109,7 +100,8 @@ class Home extends BaseController
                 'dateEnregistrement' => date('Y-m-d H:i:s')
             ]);
 
-            return redirect()->to('/');
+            session()->set('id', $userId);
+            return redirect()->to('/dashboard');
         } else {
             return redirect()->to('/inscription')->with('error', 'Une erreur est survenue lors de l\'inscription. Veuillez réessayer.');
         }
